@@ -7,6 +7,8 @@ assignees: ''
 
 ---
 
+[comment]: # (If desired, delete this line and add an image of the board here)
+
 ## Basic information
 
   - Board URL (official): TODO
