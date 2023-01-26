@@ -7,13 +7,15 @@ assignees: ''
 
 ---
 
-### Basic information
+## Basic information
 
-  - Board specs (as tested): TODO
   - Board URL (official): TODO
   - Board purchased from: TODO
+  - Board purchase date: TODO
+  - Board specs (as tested): TODO
+  - Board price (as tested): TODO
 
-### Linux/system information
+## Linux/system information
 
 ```
 # output of `uname -a`
@@ -23,16 +25,21 @@ PASTE_HERE
 PASTE_HERE
 ```
 
-### Benchmark results
+## Benchmark results
 
-#### CPU
+### CPU
 
   - Geekbench: (TODO single / TODO multi - PASTE_URL)
   - TODO Gflops ([geerlingguy/top500-benchmark](https://github.com/geerlingguy/top500-benchmark) HPL result)
 
-### Disk
+### Power
 
-`curl https://raw.githubusercontent.com/geerlingguy/pi-cluster/master/benchmarks/disk-benchmark.sh | sudo bash` (or download script and run `sudo DEVICE_UNDER_TEST=/dev/sda1 DEVICE_MOUNT_PATH=/mnt/sda1 ./disk-benchmark.sh`
+  - Idle power draw (at wall): TODO W
+  - Maximum simulated power draw (`stress-ng --matrix 0`): TODO W
+  - During Geekbench multicore benchmark: TODO W
+  - During `top500` HPL benchmark: TODO W
+
+### Disk
 
 | Benchmark | Result |
 | --- | --- |
@@ -42,22 +49,26 @@ PASTE_HERE
 | iozone 4K random read | TODO MB/s |
 | iozone 4K random write | TODO MB/s |
 
-Run this on any attached storage device (e.g. eMMC, microSD, NVMe, SATA). Also consider running [PiBenchmarks.com script](https://www.jeffgeerling.com/blog/2023/using-pibenchmarkscom-sbc-disk-performance-testing).
+`curl https://raw.githubusercontent.com/geerlingguy/pi-cluster/master/benchmarks/disk-benchmark.sh | sudo bash`
+
+Run this on any attached storage device (e.g. eMMC, microSD, NVMe, SATA). Download the script with `curl -o disk-benchmark.sh [URL_HERE]` and run `sudo DEVICE_UNDER_TEST=/dev/sda DEVICE_MOUNT_PATH=/mnt/sda1 ./disk-benchmark.sh` (assuming the device is `sda`).
+
+Also consider running [PiBenchmarks.com script](https://www.jeffgeerling.com/blog/2023/using-pibenchmarkscom-sbc-disk-performance-testing).
 
 ### Network
 
 `iperf3` results:
 
-  - `iperf3 -c [ip of server]`: TODO Mbps
-  - `iperf3 --reverse -c [ip of server]`: TODO Mbps
-  - `iperf3 --bidir -c [ip of server]`: TODO Mbps
+  - `iperf3 -c $SERVER_IP`: TODO Mbps
+  - `iperf3 --reverse -c $SERVER_IP`: TODO Mbps
+  - `iperf3 --bidir -c $SERVER_IP`: TODO Mbps
 
 (Be sure to test all interfaces, noting any that are non-functional.)
 
-### GPU
+## GPU
 
   - TODO: Haven't determined standardized benchmark yet. See [Issue #2](https://github.com/geerlingguy/sbc-reviews/issues/2).
 
-### Memory
+## Memory
 
   - TODO: Haven't determined standardized benchmark yet. See [Issue #2](https://github.com/geerlingguy/sbc-reviews/issues/2).
