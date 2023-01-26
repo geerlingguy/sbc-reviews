@@ -18,10 +18,10 @@ assignees: ''
 ## Linux/system information
 
 ```
-# output of `uname -a`
+# output of `neofetch`
 PASTE_HERE
 
-# output of `neofetch`
+# output of `uname -a`
 PASTE_HERE
 ```
 
@@ -41,6 +41,8 @@ PASTE_HERE
 
 ### Disk
 
+#### MANUFACTURER_AND_MODEL_OF_DISK_HERE
+
 | Benchmark | Result |
 | --- | --- |
 | fio 1M sequential read | TODO MB/s |
@@ -51,7 +53,7 @@ PASTE_HERE
 
 `curl https://raw.githubusercontent.com/geerlingguy/pi-cluster/master/benchmarks/disk-benchmark.sh | sudo bash`
 
-Run this on any attached storage device (e.g. eMMC, microSD, NVMe, SATA). Download the script with `curl -o disk-benchmark.sh [URL_HERE]` and run `sudo DEVICE_UNDER_TEST=/dev/sda DEVICE_MOUNT_PATH=/mnt/sda1 ./disk-benchmark.sh` (assuming the device is `sda`).
+Run benchmark on any attached storage device (e.g. eMMC, microSD, NVMe, SATA) and add results under an additional heading. Download the script with `curl -o disk-benchmark.sh [URL_HERE]` and run `sudo DEVICE_UNDER_TEST=/dev/sda DEVICE_MOUNT_PATH=/mnt/sda1 ./disk-benchmark.sh` (assuming the device is `sda`).
 
 Also consider running [PiBenchmarks.com script](https://www.jeffgeerling.com/blog/2023/using-pibenchmarkscom-sbc-disk-performance-testing).
 
