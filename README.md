@@ -39,12 +39,12 @@ All SBCs I have tested as part of this project are listed below. Click on the na
 
 | SBC Name | Year Introduced |
 | --- | --- |
-| [Radxa Rock 5 model B](issues/3) | 2023 |
-| [Orange Pi 5](issues/5) | 2023 |
-| [StarFive VisionFive 2](issues/10) | 2022 |
-| [Pine64 SOQuartz](issues/7) | 2021 |
-| [Raspberry Pi Compute Module 4](issues/8) | 2020 |
-| [Raspberry Pi 4 model B](issues/4) | 2019 |
+| [Radxa Rock 5 model B](https://github.com/geerlingguy/sbc-reviews/issues/3) | 2023 |
+| [Orange Pi 5](https://github.com/geerlingguy/sbc-reviews/issues/5) | 2023 |
+| [StarFive VisionFive 2](https://github.com/geerlingguy/sbc-reviews/issues/10) | 2022 |
+| [Pine64 SOQuartz](https://github.com/geerlingguy/sbc-reviews/issues/7) | 2021 |
+| [Raspberry Pi Compute Module 4](https://github.com/geerlingguy/sbc-reviews/issues/8) | 2020 |
+| [Raspberry Pi 4 model B](https://github.com/geerlingguy/sbc-reviews/issues/4) | 2019 |
 
 This table should be ordered by the date the board was launched, in descending order. I might add a CSV file (so it's still easy to manage by hand) which could be compiled into this README at some point in the future (that would also allow putting benchmark numbers directly into the CSV...).
 
