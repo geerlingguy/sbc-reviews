@@ -38,6 +38,7 @@ I often test a variety of other board-specific features, too, though it depends 
 All SBCs I have tested as part of this project are listed below. Click on the name of the SBC to view all the testing and benchmarking details.
 
 | SBC Name | Year Introduced |
+| --- | --- |
 | [Radxa Rock 5 model B](issues/3) | 2023 |
 | [Orange Pi 5](issues/5) | 2023 |
 | [Pine64 SOQuartz](issues/7) | 2021 |
