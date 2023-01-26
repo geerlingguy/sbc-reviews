@@ -1,6 +1,6 @@
 # SBC Reviews
 
-Jeff Geerling's SBC (Single-Board Computer) review and benchmarking data.
+Jeff Geerling's SBC (Single-Board Computer) review and benchmarking data repo.
 
 There are many like it, but this one is mine.
 
