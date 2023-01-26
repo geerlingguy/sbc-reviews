@@ -41,6 +41,7 @@ All SBCs I have tested as part of this project are listed below. Click on the na
 | --- | --- |
 | [Radxa Rock 5 model B](issues/3) | 2023 |
 | [Orange Pi 5](issues/5) | 2023 |
+| [StarFive VisionFive 2](issues/10) | 2022 |
 | [Pine64 SOQuartz](issues/7) | 2021 |
 | [Raspberry Pi Compute Module 4](issues/8) | 2020 |
 | [Raspberry Pi 4 model B](issues/4) | 2019 |
