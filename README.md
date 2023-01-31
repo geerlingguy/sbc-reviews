@@ -41,6 +41,7 @@ All SBCs I have tested as part of this project are listed below. Click on the na
 | --- | --- |
 | [Radxa Rock 5 model B](https://github.com/geerlingguy/sbc-reviews/issues/3) | 2023 |
 | [Orange Pi 5](https://github.com/geerlingguy/sbc-reviews/issues/5) | 2023 |
+| [Banana Pi BPI-CM4](https://github.com/geerlingguy/sbc-reviews/issues/11) | 2022 |
 | [StarFive VisionFive 2](https://github.com/geerlingguy/sbc-reviews/issues/10) | 2022 |
 | [Pine64 SOQuartz](https://github.com/geerlingguy/sbc-reviews/issues/7) | 2021 |
 | [Raspberry Pi Compute Module 4](https://github.com/geerlingguy/sbc-reviews/issues/8) | 2020 |
