@@ -12,7 +12,11 @@ genTable()
 	sed '/^#/d' data.csv | while read -t 0.1 -r -a line
 	do
 		# Print table entries
-		printf '%s | ' "${line[0]}" #Print ID
+		if [ $x -ne 0 ]; then
+			printf '#%s | ' "${line[0]}" #Print ID
+		else
+			printf '%s | ' "${line[0]}" #Print ID
+		fi
 		printf '%s | ' "${line[1]}" #Print Product Name
 		printf '%s | ' "${line[2]}" #Test Date
 		printf '%s | ' "${line[3]}" #CPU Test 1 Single
