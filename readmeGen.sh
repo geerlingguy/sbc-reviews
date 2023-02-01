@@ -29,7 +29,18 @@ genTable()
 		printf '%s | ' "${line[14]}" #Network Bidiretional Test 1
 		printf '%s | ' "${line[15]}" #Network Bidiretional Test 2
 		printf '\n'
-		[  $x -ne 1 ] && printf '%s\n ' '----------'
+
+		if [  $x -ne 1 ]
+		then
+			y=0
+			printf '%s' '|'
+			while [ $y -le 15 ]
+			do
+				printf '%s' '----|'
+				y=$((y+1))
+			done
+			printf '\n'
+		fi
 		x=1
 	done
 }
