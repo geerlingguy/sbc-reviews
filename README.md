@@ -47,6 +47,7 @@ All SBCs I have tested as part of this project are listed below. Click on the na
 | [Pine64 SOQuartz](https://github.com/geerlingguy/sbc-reviews/issues/7) | 2021 |
 | [Raspberry Pi Compute Module 4](https://github.com/geerlingguy/sbc-reviews/issues/8) | 2020 |
 | [Raspberry Pi 4 model B](https://github.com/geerlingguy/sbc-reviews/issues/4) | 2019 |
+| [Raspberry Pi 3 model B+](https://github.com/geerlingguy/sbc-reviews/issues/16) | 2018 |
 
 This table should be ordered by the date the board was launched, in descending order. I might add a CSV file (so it's still easy to manage by hand) which could be compiled into this README at some point in the future (that would also allow putting benchmark numbers directly into the CSV...).
 
