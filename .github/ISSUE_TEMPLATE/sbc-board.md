@@ -45,6 +45,8 @@ PASTE_HERE
 
 #### MANUFACTURER_AND_MODEL_OF_DISK_HERE
 
+[comment]: # (Run `lsblk -o NAME,FSTYPE,LABEL,MOUNTPOINT,SIZE,MODEL` to get model)
+
 | Benchmark | Result |
 | --- | --- |
 | fio 1M sequential read | TODO MB/s |
