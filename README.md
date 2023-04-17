@@ -39,6 +39,7 @@ All SBCs I have tested as part of this project are listed below. Click on the na
 
 | SBC Name | Year Introduced |
 | --- | --- |
+| [Ampere Altra Developer Platform](https://github.com/geerlingguy/sbc-reviews/issues/19) | 2023 |
 | [Radxa Rock 5 model B](https://github.com/geerlingguy/sbc-reviews/issues/3) | 2023 |
 | [Orange Pi 5](https://github.com/geerlingguy/sbc-reviews/issues/5) | 2023 |
 | [Banana Pi BPI-CM4](https://github.com/geerlingguy/sbc-reviews/issues/11) | 2022 |
