@@ -13,10 +13,10 @@ jobs:
     steps:
       - uses: actions/stale@v8
         with:
-          days-before-stale: 120
-          days-before-close: 60
-          exempt-issue-labels: bug,pinned,security,planned
-          exempt-pr-labels: bug,pinned,security,planned
+          days-before-stale: 1460
+          days-before-close: 365
+          exempt-issue-labels: bug,pinned,security,planned,enhancement
+          exempt-pr-labels: bug,pinned,security,planned,enhancement
           stale-issue-label: "stale"
           stale-pr-label: "stale"
           stale-issue-message: |
