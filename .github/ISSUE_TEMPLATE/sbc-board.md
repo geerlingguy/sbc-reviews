@@ -31,7 +31,7 @@ PASTE_HERE
 
 ### CPU
 
-  - Geekbench: (TODO single / TODO multi - PASTE_URL)
+  - Geekbench 6: (TODO single / TODO multi - PASTE_URL)
   - TODO Gflops ([geerlingguy/top500-benchmark](https://github.com/geerlingguy/top500-benchmark) HPL result)
 
 ### Power
@@ -78,3 +78,13 @@ Also consider running [PiBenchmarks.com script](https://www.jeffgeerling.com/blo
 ## Memory
 
   - TODO: Haven't determined standardized benchmark yet. See [Issue #2](https://github.com/geerlingguy/sbc-reviews/issues/2).
+
+## Phoronix Test Suite
+
+Results from [pi-general-benchmark.sh](https://gist.github.com/geerlingguy/570e13f4f81a40a5395688667b1f79af):
+
+  - pts/encode-mp3: TODO sec
+  - pts/x264 4K: TODO fps
+  - pts/x264 1080p: TODO fps
+  - pts/phpbench: TODO
+  - pts/build-linux-kernel (defconfig): TODO sec
