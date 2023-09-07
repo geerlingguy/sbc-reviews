@@ -77,7 +77,17 @@ Also consider running [PiBenchmarks.com script](https://www.jeffgeerling.com/blo
 
 ## Memory
 
-  - TODO: Haven't determined standardized benchmark yet. See [Issue #2](https://github.com/geerlingguy/sbc-reviews/issues/2).
+`tinymembench` results:
+
+<details>
+<summary>Click to expand memory benchmark result</summary>
+
+```
+# Run the two commands below, then replace this code block with the full result.
+git clone https://github.com/rojaster/tinymembench.git && cd tinymembench && make
+./tinymembench
+```
+</details>
 
 ## Phoronix Test Suite
 
