@@ -89,6 +89,15 @@ git clone https://github.com/rojaster/tinymembench.git && cd tinymembench && mak
 ```
 </details>
 
+## `sbc-bench` results
+
+Run sbc-bench and paste a link to the results here:
+
+```
+wget https://raw.githubusercontent.com/ThomasKaiser/sbc-bench/master/sbc-bench.sh
+sudo /bin/bash ./sbc-bench.sh -r
+```
+
 ## Phoronix Test Suite
 
 Results from [pi-general-benchmark.sh](https://gist.github.com/geerlingguy/570e13f4f81a40a5395688667b1f79af):
