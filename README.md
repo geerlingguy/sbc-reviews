@@ -39,6 +39,7 @@ All SBCs I have tested as part of this project are listed below. Click on the na
 
 | SBC Name | Year Introduced |
 | --- | --- |
+| [Orange Pi Compute Module 4](https://github.com/geerlingguy/sbc-reviews/issues/26) | 2023 |
 | [Milk-V Mars CM](https://github.com/geerlingguy/sbc-reviews/issues/22) | 2023 |
 | [Raspberry Pi 5 model B](https://github.com/geerlingguy/sbc-reviews/issues/21) | 2023 |
 | [Ampere Altra Developer Platform](https://github.com/geerlingguy/sbc-reviews/issues/19) | 2023 |
