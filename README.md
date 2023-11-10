@@ -4,6 +4,30 @@ Jeff Geerling's SBC (Single-Board Computer) review and benchmarking data repo.
 
 There are many like it, but this one is mine.
 
+## List of SBCs
+
+All SBCs I have tested as part of this project are listed below. Click on the name of the SBC to view all the testing and benchmarking details.
+
+| SBC Name | Year Introduced |
+| --- | --- |
+| [Luckfox Core3566](https://github.com/geerlingguy/sbc-reviews/issues/27) | 2023 |
+| [Orange Pi Compute Module 4](https://github.com/geerlingguy/sbc-reviews/issues/26) | 2023 |
+| [Milk-V Mars CM](https://github.com/geerlingguy/sbc-reviews/issues/22) | 2023 |
+| [Raspberry Pi 5 model B](https://github.com/geerlingguy/sbc-reviews/issues/21) | 2023 |
+| [Ampere Altra Developer Platform](https://github.com/geerlingguy/sbc-reviews/issues/19) | 2023 |
+| [Radxa Rock 5 model B](https://github.com/geerlingguy/sbc-reviews/issues/3) | 2023 |
+| [Orange Pi 5](https://github.com/geerlingguy/sbc-reviews/issues/5) | 2023 |
+| [Banana Pi BPI-CM4](https://github.com/geerlingguy/sbc-reviews/issues/11) | 2022 |
+| [StarFive VisionFive 2](https://github.com/geerlingguy/sbc-reviews/issues/10) | 2022 |
+| [BigTreeTech CB1](https://github.com/geerlingguy/sbc-reviews/issues/28) | 2022 |
+| [Radxa Rock 3 Compute Module](https://github.com/geerlingguy/sbc-reviews/issues/15) | 2021 |
+| [Pine64 SOQuartz](https://github.com/geerlingguy/sbc-reviews/issues/7) | 2021 |
+| [Raspberry Pi Compute Module 4](https://github.com/geerlingguy/sbc-reviews/issues/8) | 2020 |
+| [Raspberry Pi 4 model B](https://github.com/geerlingguy/sbc-reviews/issues/4) | 2019 |
+| [Raspberry Pi 3 model B+](https://github.com/geerlingguy/sbc-reviews/issues/16) | 2018 |
+
+This table should be ordered by the date the board was launched, in descending order. I might add a CSV file (so it's still easy to manage by hand) which could be compiled into this README at some point in the future (that would also allow putting benchmark numbers directly into the CSV...).
+
 ## Motivation
 
 I test a _lot_ of SBCs from Raspberry Pi, Radxa, Orange Pi, Pine64, ODROID, ASUS, and more.
@@ -24,36 +48,13 @@ The primary benchmarks I run are:
 
   - CPU: [Geekbench 5](https://www.geekbench.com/download/)
   - CPU: [Top500 HPL](https://github.com/geerlingguy/top500-benchmark)
-  - CPU: TODO
   - GPU: TODO
-  - Memory: TODO
+  - Memory: `tinymembench`
   - Disk: [`disk-benchmark.sh`](https://github.com/geerlingguy/pi-cluster/blob/master/benchmarks/disk-benchmark.sh)
   - Disk: [PiBenchmarks.com](https://pibenchmarks.com)
   - Network: `iperf3` (upstream, downstream, and bidirectional)
 
 I often test a variety of other board-specific features, too, though it depends on the amount of time I'm willing to devote to a specific board, whether I'll deep-dive or just get basic numbers.
-
-## List of SBCs
-
-All SBCs I have tested as part of this project are listed below. Click on the name of the SBC to view all the testing and benchmarking details.
-
-| SBC Name | Year Introduced |
-| --- | --- |
-| [Orange Pi Compute Module 4](https://github.com/geerlingguy/sbc-reviews/issues/26) | 2023 |
-| [Milk-V Mars CM](https://github.com/geerlingguy/sbc-reviews/issues/22) | 2023 |
-| [Raspberry Pi 5 model B](https://github.com/geerlingguy/sbc-reviews/issues/21) | 2023 |
-| [Ampere Altra Developer Platform](https://github.com/geerlingguy/sbc-reviews/issues/19) | 2023 |
-| [Radxa Rock 5 model B](https://github.com/geerlingguy/sbc-reviews/issues/3) | 2023 |
-| [Orange Pi 5](https://github.com/geerlingguy/sbc-reviews/issues/5) | 2023 |
-| [Banana Pi BPI-CM4](https://github.com/geerlingguy/sbc-reviews/issues/11) | 2022 |
-| [StarFive VisionFive 2](https://github.com/geerlingguy/sbc-reviews/issues/10) | 2022 |
-| [Radxa Rock 3 Compute Module](https://github.com/geerlingguy/sbc-reviews/issues/15) | 2021 |
-| [Pine64 SOQuartz](https://github.com/geerlingguy/sbc-reviews/issues/7) | 2021 |
-| [Raspberry Pi Compute Module 4](https://github.com/geerlingguy/sbc-reviews/issues/8) | 2020 |
-| [Raspberry Pi 4 model B](https://github.com/geerlingguy/sbc-reviews/issues/4) | 2019 |
-| [Raspberry Pi 3 model B+](https://github.com/geerlingguy/sbc-reviews/issues/16) | 2018 |
-
-This table should be ordered by the date the board was launched, in descending order. I might add a CSV file (so it's still easy to manage by hand) which could be compiled into this README at some point in the future (that would also allow putting benchmark numbers directly into the CSV...).
 
 ## SBC Awards
 
