@@ -8,23 +8,25 @@ There are many like it, but this one is mine.
 
 All SBCs I have tested as part of this project are listed below. Click on the name of the SBC to view all the testing and benchmarking details.
 
-| SBC Name | Year Introduced |
-| --- | --- |
-| [Luckfox Core3566](https://github.com/geerlingguy/sbc-reviews/issues/27) | 2023 |
-| [Orange Pi Compute Module 4](https://github.com/geerlingguy/sbc-reviews/issues/26) | 2023 |
-| [Milk-V Mars CM](https://github.com/geerlingguy/sbc-reviews/issues/22) | 2023 |
-| [Raspberry Pi 5 model B](https://github.com/geerlingguy/sbc-reviews/issues/21) | 2023 |
-| [Ampere Altra Developer Platform](https://github.com/geerlingguy/sbc-reviews/issues/19) | 2023 |
-| [Radxa Rock 5 model B](https://github.com/geerlingguy/sbc-reviews/issues/3) | 2023 |
-| [Orange Pi 5](https://github.com/geerlingguy/sbc-reviews/issues/5) | 2023 |
-| [Banana Pi BPI-CM4](https://github.com/geerlingguy/sbc-reviews/issues/11) | 2022 |
-| [StarFive VisionFive 2](https://github.com/geerlingguy/sbc-reviews/issues/10) | 2022 |
-| [BigTreeTech CB1](https://github.com/geerlingguy/sbc-reviews/issues/28) | 2022 |
-| [Radxa Rock 3 Compute Module](https://github.com/geerlingguy/sbc-reviews/issues/15) | 2021 |
-| [Pine64 SOQuartz](https://github.com/geerlingguy/sbc-reviews/issues/7) | 2021 |
-| [Raspberry Pi Compute Module 4](https://github.com/geerlingguy/sbc-reviews/issues/8) | 2020 |
-| [Raspberry Pi 4 model B](https://github.com/geerlingguy/sbc-reviews/issues/4) | 2019 |
-| [Raspberry Pi 3 model B+](https://github.com/geerlingguy/sbc-reviews/issues/16) | 2018 |
+| SBC Name | Year Introduced | CPU | Core | Count | ISA |
+| --- | --- | --- | --- | --- |
+| [Luckfox Core3566](https://github.com/geerlingguy/sbc-reviews/issues/27) | 2023 | Rockchip RK3566 | Arm Cortex-A55 | 4 | ARMV8.2-A 64-bit |
+| [Orange Pi Compute Module 4](https://github.com/geerlingguy/sbc-reviews/issues/26) | 2023 | Rockchip RK3566 | Arm Cortex-A55 | 4 | ARMV8.2-A 64-bit |
+| [Milk-V Mars CM](https://github.com/geerlingguy/sbc-reviews/issues/22) | 2023 | StarFive JH7110 | SiFive U74 | 4 | RV64GCB |
+| [Raspberry Pi 5 model B](https://github.com/geerlingguy/sbc-reviews/issues/21) | 2023 | Broadcom BCM2712 | Arm-Cortex A76 | 4 | ARMv8.2-A 64-bit |
+| [Ampere Altra Developer Platform](https://github.com/geerlingguy/sbc-reviews/issues/19) | 2023 | Ampere Altra | TBC | 32+ | ARMv8.2-A 64-bit |
+| [Radxa Rock 5 model B](https://github.com/geerlingguy/sbc-reviews/issues/3) | 2023 | Rockchip RK3588 | Arm Cortex-A76+A55 | 4+4 | ARMV8.2-A 64-bit |
+| [Orange Pi 5](https://github.com/geerlingguy/sbc-reviews/issues/5) | 2023 | Rockchip RK3588S | Arm Cortex-A76+A55 | 4+4 | ARMV8.2-A 64-bit |
+| [Banana Pi BPI-CM4](https://github.com/geerlingguy/sbc-reviews/issues/11) | 2022 | Amlogic A311D | Arm Cortex-A73+A53 | 4+2 | ARMv8-A 64-bit |
+| [StarFive VisionFive 2](https://github.com/geerlingguy/sbc-reviews/issues/10) | 2022 | StarFive JH7110 | SiFive U74 | 4 | RV64GCB |
+| [BigTreeTech CB1](https://github.com/geerlingguy/sbc-reviews/issues/28) | 2022 | Allwinner H616 | Arm Cortex-A53 | 4 | ARMv8-A 64-bit |
+| [Radxa Rock 3 Compute Module](https://github.com/geerlingguy/sbc-reviews/issues/15) | 2021 | Rockchip RK3566 | Arm Cortex-A55 | 4 | ARMV8.2-A 64-bit |
+| [Pine64 SOQuartz](https://github.com/geerlingguy/sbc-reviews/issues/7) | 2021 | ARM64 | Rockchip RK3566 | Arm Cortex-A55 | 4 | ARMV8.2-A 64-bit |
+| [Raspberry Pi Compute Module 4](https://github.com/geerlingguy/sbc-reviews/issues/8) | 2020 | Broadcom BCM2711 | Arm Cortex-A72 | 4 | ARMv8-A 64-bit |
+| [Raspberry Pi 4 model B](https://github.com/geerlingguy/sbc-reviews/issues/4) | 2019 | Broadcom BCM2711 | Arm Cortex-A72 | 4 | ARMv8-A 64-bit |
+| [Raspberry Pi 3 model B+](https://github.com/geerlingguy/sbc-reviews/issues/16) | 2018 | Boardcom BCM2837B0 | Arm Cortex-A53 | 4 | ARMv8-A 64-bit |
+
+CPU specifications are based on current models, not models tested / benchmarked.
 
 This table should be ordered by the date the board was launched, in descending order. I might add a CSV file (so it's still easy to manage by hand) which could be compiled into this README at some point in the future (that would also allow putting benchmark numbers directly into the CSV...).
 
