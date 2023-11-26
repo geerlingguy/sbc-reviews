@@ -9,7 +9,7 @@ There are many like it, but this one is mine.
 All SBCs I have tested as part of this project are listed below. Click on the name of the SBC to view all the testing and benchmarking details.
 
 | SBC Name | Year Introduced | CPU | Core | Count | ISA |
-| --- | --- | --- | --- | --- |
+| --- | --- | --- | --- | --- | --- |
 | [Luckfox Core3566](https://github.com/geerlingguy/sbc-reviews/issues/27) | 2023 | Rockchip RK3566 | Arm Cortex-A55 | 4 | ARMV8.2-A 64-bit |
 | [Orange Pi Compute Module 4](https://github.com/geerlingguy/sbc-reviews/issues/26) | 2023 | Rockchip RK3566 | Arm Cortex-A55 | 4 | ARMV8.2-A 64-bit |
 | [Milk-V Mars CM](https://github.com/geerlingguy/sbc-reviews/issues/22) | 2023 | StarFive JH7110 | SiFive U74 | 4 | RV64GCB |
