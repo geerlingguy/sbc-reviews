@@ -8,7 +8,6 @@ There are many like it, but this one is mine.
 
 All SBCs I have tested as part of this project are listed below. Click on the name of the SBC to view all the testing and benchmarking details.
 
-### Simple List
 | SBC Name | Year Introduced | CPU |
 | --- | --- | --- | 
 | [Luckfox Core3566](https://github.com/geerlingguy/sbc-reviews/issues/27) | 2023 | Rockchip RK3566 |
@@ -27,13 +26,7 @@ All SBCs I have tested as part of this project are listed below. Click on the na
 | [Raspberry Pi 4 model B](https://github.com/geerlingguy/sbc-reviews/issues/4) | 2019 | Broadcom BCM2711 |
 | [Raspberry Pi 3 model B+](https://github.com/geerlingguy/sbc-reviews/issues/16) | 2018 | Boardcom BCM2837B0 |
 
-CPU specifications are based on current models, not models tested / benchmarked.
-
 This table should be ordered by the date the board was launched, in descending order. I might add a CSV file (so it's still easy to manage by hand) which could be compiled into this README at some point in the future (that would also allow putting benchmark numbers directly into the CSV...).
-
-### Detailed List
-
-[Please see here.](https://github.com/geerlingguy/sbc-reviews/issues/32)
 
 ## Motivation
 
