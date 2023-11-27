@@ -8,25 +8,32 @@ There are many like it, but this one is mine.
 
 All SBCs I have tested as part of this project are listed below. Click on the name of the SBC to view all the testing and benchmarking details.
 
-| SBC Name | Year Introduced |
-| --- | --- |
-| [Luckfox Core3566](https://github.com/geerlingguy/sbc-reviews/issues/27) | 2023 |
-| [Orange Pi Compute Module 4](https://github.com/geerlingguy/sbc-reviews/issues/26) | 2023 |
-| [Milk-V Mars CM](https://github.com/geerlingguy/sbc-reviews/issues/22) | 2023 |
-| [Raspberry Pi 5 model B](https://github.com/geerlingguy/sbc-reviews/issues/21) | 2023 |
-| [Ampere Altra Developer Platform](https://github.com/geerlingguy/sbc-reviews/issues/19) | 2023 |
-| [Radxa Rock 5 model B](https://github.com/geerlingguy/sbc-reviews/issues/3) | 2023 |
-| [Orange Pi 5](https://github.com/geerlingguy/sbc-reviews/issues/5) | 2023 |
-| [Banana Pi BPI-CM4](https://github.com/geerlingguy/sbc-reviews/issues/11) | 2022 |
-| [StarFive VisionFive 2](https://github.com/geerlingguy/sbc-reviews/issues/10) | 2022 |
-| [BigTreeTech CB1](https://github.com/geerlingguy/sbc-reviews/issues/28) | 2022 |
-| [Radxa Rock 3 Compute Module](https://github.com/geerlingguy/sbc-reviews/issues/15) | 2021 |
-| [Pine64 SOQuartz](https://github.com/geerlingguy/sbc-reviews/issues/7) | 2021 |
-| [Raspberry Pi Compute Module 4](https://github.com/geerlingguy/sbc-reviews/issues/8) | 2020 |
-| [Raspberry Pi 4 model B](https://github.com/geerlingguy/sbc-reviews/issues/4) | 2019 |
-| [Raspberry Pi 3 model B+](https://github.com/geerlingguy/sbc-reviews/issues/16) | 2018 |
+### Simple List
+| SBC Name | Year Introduced | CPU |
+| --- | --- | --- | 
+| [Luckfox Core3566](https://github.com/geerlingguy/sbc-reviews/issues/27) | 2023 | Rockchip RK3566 |
+| [Orange Pi Compute Module 4](https://github.com/geerlingguy/sbc-reviews/issues/26) | 2023 | Rockchip RK3566 |
+| [Milk-V Mars CM](https://github.com/geerlingguy/sbc-reviews/issues/22) | 2023 | StarFive JH7110 |
+| [Raspberry Pi 5 model B](https://github.com/geerlingguy/sbc-reviews/issues/21) | 2023 | Broadcom BCM2712 |
+| [Ampere Altra Developer Platform](https://github.com/geerlingguy/sbc-reviews/issues/19) | 2023 | Ampere Altra |
+| [Radxa Rock 5 model B](https://github.com/geerlingguy/sbc-reviews/issues/3) | 2023 | Rockchip RK3588 |
+| [Orange Pi 5](https://github.com/geerlingguy/sbc-reviews/issues/5) | 2023 | Rockchip RK3588S |
+| [Banana Pi BPI-CM4](https://github.com/geerlingguy/sbc-reviews/issues/11) | 2022 | Amlogic A311D |
+| [StarFive VisionFive 2](https://github.com/geerlingguy/sbc-reviews/issues/10) | 2022 | StarFive JH7110 |
+| [BigTreeTech CB1](https://github.com/geerlingguy/sbc-reviews/issues/28) | 2022 | Allwinner H616 |
+| [Radxa Rock 3 Compute Module](https://github.com/geerlingguy/sbc-reviews/issues/15) | 2021 | Rockchip RK3566 |
+| [Pine64 SOQuartz](https://github.com/geerlingguy/sbc-reviews/issues/7) | 2021 | Rockchip RK3566 |
+| [Raspberry Pi Compute Module 4](https://github.com/geerlingguy/sbc-reviews/issues/8) | 2020 | Broadcom BCM2711 |
+| [Raspberry Pi 4 model B](https://github.com/geerlingguy/sbc-reviews/issues/4) | 2019 | Broadcom BCM2711 |
+| [Raspberry Pi 3 model B+](https://github.com/geerlingguy/sbc-reviews/issues/16) | 2018 | Boardcom BCM2837B0 |
+
+CPU specifications are based on current models, not models tested / benchmarked.
 
 This table should be ordered by the date the board was launched, in descending order. I might add a CSV file (so it's still easy to manage by hand) which could be compiled into this README at some point in the future (that would also allow putting benchmark numbers directly into the CSV...).
+
+### Detailed List
+
+[Please see here.](https://github.com/geerlingguy/sbc-reviews/issues/32)
 
 ## Motivation
 
