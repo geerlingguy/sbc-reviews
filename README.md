@@ -22,7 +22,7 @@ All SBCs I have tested as part of this project are listed below. Click on the na
 | [StarFive VisionFive 2](https://github.com/geerlingguy/sbc-reviews/issues/10) | 2022 | StarFive JH7110 |
 | [BigTreeTech CB1](https://github.com/geerlingguy/sbc-reviews/issues/28) | 2022 | Allwinner H616 |
 | [Radxa Rock 3 Compute Module](https://github.com/geerlingguy/sbc-reviews/issues/15) | 2021 | Rockchip RK3566 |
-| [Pine64 SOQuartz](https://github.com/geerlingguy/sbc-reviews/issues/7) | 2021 | ARM64 | Rockchip RK3566 |
+| [Pine64 SOQuartz](https://github.com/geerlingguy/sbc-reviews/issues/7) | 2021 | Rockchip RK3566 |
 | [Raspberry Pi Compute Module 4](https://github.com/geerlingguy/sbc-reviews/issues/8) | 2020 | Broadcom BCM2711 |
 | [Raspberry Pi 4 model B](https://github.com/geerlingguy/sbc-reviews/issues/4) | 2019 | Broadcom BCM2711 |
 | [Raspberry Pi 3 model B+](https://github.com/geerlingguy/sbc-reviews/issues/16) | 2018 | Boardcom BCM2837B0 |
