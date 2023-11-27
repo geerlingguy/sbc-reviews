@@ -29,11 +29,11 @@ All SBCs I have tested as part of this project are listed below. Click on the na
 
 CPU specifications are based on current models, not models tested / benchmarked.
 
+This table should be ordered by the date the board was launched, in descending order. I might add a CSV file (so it's still easy to manage by hand) which could be compiled into this README at some point in the future (that would also allow putting benchmark numbers directly into the CSV...).
+
 ### Detailed List
 
 [Please see here.](https://github.com/geerlingguy/sbc-reviews/issues/32)
-
-This table should be ordered by the date the board was launched, in descending order. I might add a CSV file (so it's still easy to manage by hand) which could be compiled into this README at some point in the future (that would also allow putting benchmark numbers directly into the CSV...).
 
 ## Motivation
 
