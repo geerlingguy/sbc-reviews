@@ -13,7 +13,6 @@ All SBCs I have tested as part of this project are listed below. Click on the na
 | [Lichee Console 4A](https://github.com/geerlingguy/sbc-reviews/issues/39) | 2024 | T-Head TH1520 |
 | [Turing Pi RK1](https://github.com/geerlingguy/sbc-reviews/issues/38) | 2024 | Rockchip RK3588 |
 | [Orange Pi Zero 2W](https://github.com/geerlingguy/sbc-reviews/issues/33) | 2023 | Allwinner H618 |
->>>>>>> e41789f (Issue #39: Add Lichee Console 4A.)
 | [Luckfox Core3566](https://github.com/geerlingguy/sbc-reviews/issues/27) | 2023 | Rockchip RK3566 |
 | [Orange Pi Compute Module 4](https://github.com/geerlingguy/sbc-reviews/issues/26) | 2023 | Rockchip RK3566 |
 | [Milk-V Mars CM](https://github.com/geerlingguy/sbc-reviews/issues/22) | 2023 | StarFive JH7110 |
