@@ -73,7 +73,17 @@ Also consider running [PiBenchmarks.com script](https://www.jeffgeerling.com/blo
 
 ## GPU
 
-  - TODO: Haven't determined standardized benchmark yet. See [Issue #2](https://github.com/geerlingguy/sbc-reviews/issues/2).
+`glmark2-es2` results:
+
+```
+1. Install glmark2-es2 with `sudo apt install -y glmark2-es2`
+2. Run `glmark2-es2`
+3. Replace this block of text with the results.
+```
+
+Note: This benchmark requires an active display on the device. Not all devices may be able to run `glmark2-es2`, so in that case, make a note and move on!
+
+TODO: See [this issue](https://github.com/geerlingguy/sbc-reviews/issues/2) for discussion about a full suite of standardized GPU benchmarks.
 
 ## Memory
 
