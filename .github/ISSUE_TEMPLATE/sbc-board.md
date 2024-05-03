@@ -47,17 +47,22 @@ PASTE_HERE
 
 [comment]: # (Run `lsblk -o NAME,FSTYPE,LABEL,MOUNTPOINT,SIZE,MODEL` to get model)
 
-| Benchmark | Result |
-| --- | --- |
-| fio 1M sequential read | TODO MB/s |
-| iozone 1M random read | TODO MB/s |
-| iozone 1M random write | TODO MB/s |
-| iozone 4K random read | TODO MB/s |
-| iozone 4K random write | TODO MB/s |
+| Benchmark                  | Result |
+| -------------------------- | ------ |
+| iozone 4K random read      | TODO MB/s |
+| iozone 4K random write     | TODO MB/s |
+| iozone 1M random read      | TODO MB/s |
+| iozone 1M random write     | TODO MB/s |
+| iozone 1M sequential read  | TODO MB/s |
+| iozone 1M sequential write | TODO MB/s |
 
-`curl https://raw.githubusercontent.com/geerlingguy/pi-cluster/master/benchmarks/disk-benchmark.sh | sudo bash`
+```
+wget https://raw.githubusercontent.com/geerlingguy/pi-cluster/master/benchmarks/disk-benchmark.sh
+chmod +x disk-benchmark.sh
+sudo MOUNT_PATH=/ TEST_SIZE=1g ./disk-benchmark.sh
+```
 
-Run benchmark on any attached storage device (e.g. eMMC, microSD, NVMe, SATA) and add results under an additional heading. Download the script with `curl -o disk-benchmark.sh [URL_HERE]` and run `sudo DEVICE_UNDER_TEST=/dev/sda DEVICE_MOUNT_PATH=/mnt/sda1 ./disk-benchmark.sh` (assuming the device is `sda`).
+Run benchmark on any attached storage device (e.g. eMMC, microSD, NVMe, SATA) and add results under an additional heading.
 
 Also consider running [PiBenchmarks.com script](https://www.jeffgeerling.com/blog/2023/using-pibenchmarkscom-sbc-disk-performance-testing).
 
