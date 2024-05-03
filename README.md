@@ -10,6 +10,7 @@ All SBCs I have tested as part of this project are listed below. Click on the na
 
 | SBC Name | Year Introduced | CPU |
 | --- | --- | --- |
+| [LattePanda Mu](https://github.com/geerlingguy/sbc-reviews/issues/42) | 2024 | Intel N100 |
 | [Radxa CM5](https://github.com/geerlingguy/sbc-reviews/issues/40) | 2024 | Rockchip RK3588S2 |
 | [Lichee Console 4A](https://github.com/geerlingguy/sbc-reviews/issues/39) | 2024 | T-Head TH1520 |
 | [Turing Pi RK1](https://github.com/geerlingguy/sbc-reviews/issues/38) | 2024 | Rockchip RK3588 |
