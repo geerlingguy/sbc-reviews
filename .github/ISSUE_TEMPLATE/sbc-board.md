@@ -71,8 +71,8 @@ Also consider running [PiBenchmarks.com script](https://www.jeffgeerling.com/blo
 `iperf3` results:
 
   - `iperf3 -c $SERVER_IP`: TODO Mbps
-  - `iperf3 --reverse -c $SERVER_IP`: TODO Mbps
-  - `iperf3 --bidir -c $SERVER_IP`: TODO Mbps up, TODO Mbps down
+  - `iperf3 -c $SERVER_IP --reverse`: TODO Mbps
+  - `iperf3 -c $SERVER_IP --bidir`: TODO Mbps up, TODO Mbps down
 
 (Be sure to test all interfaces, noting any that are non-functional.)
 
