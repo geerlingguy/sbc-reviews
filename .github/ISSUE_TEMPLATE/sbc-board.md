@@ -20,7 +20,7 @@ assignees: ''
 ## Linux/system information
 
 ```
-# output of `neofetch`
+# output of `screenfetch`
 PASTE_HERE
 
 # output of `uname -a`
