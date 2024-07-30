@@ -10,6 +10,8 @@ All SBCs I have tested as part of this project are listed below. Click on the na
 
 | SBC Name | Year Introduced | CPU |
 | --- | --- | --- |
+| [Radxa X4](https://github.com/geerlingguy/sbc-reviews/issues/48) | 2024 | Intel N100 |
+| [Milk-V Jupiter](https://github.com/geerlingguy/sbc-reviews/issues/47) | 2024 | Spacemit X60 |
 | [Milk-V Mars](https://github.com/geerlingguy/sbc-reviews/issues/46) | 2024 | StarFive JH7110 |
 | [LattePanda Mu](https://github.com/geerlingguy/sbc-reviews/issues/42) | 2024 | Intel N100 |
 | [Radxa Rock 5C](https://github.com/geerlingguy/sbc-reviews/issues/41) | 2024 | Rockchip RK3588S2 |
