@@ -78,7 +78,7 @@ Also consider running [PiBenchmarks.com script](https://www.jeffgeerling.com/blo
 
 ## GPU
 
-`glmark2-es2` results:
+`glmark2-es2` / `glmark2-es2-wayland` results:
 
 ```
 1. Install glmark2-es2 with `sudo apt install -y glmark2-es2`
