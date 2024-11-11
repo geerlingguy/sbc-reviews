@@ -78,15 +78,36 @@ Also consider running [PiBenchmarks.com script](https://www.jeffgeerling.com/blo
 
 ## GPU
 
+### glmark2
+
 `glmark2-es2` / `glmark2-es2-wayland` results:
 
 ```
 1. Install glmark2-es2 with `sudo apt install -y glmark2-es2`
-2. Run `glmark2-es2`
+2. Run `glmark2-es2` (with `DISPLAY=:0` prepended if running over SSH)
 3. Replace this block of text with the results.
 ```
 
 Note: This benchmark requires an active display on the device. Not all devices may be able to run `glmark2-es2`, so in that case, make a note and move on!
+
+### Ollama
+
+`ollama` LLM model inference results:
+
+```
+# Install ollama
+curl -fsSL https://ollama.com/install.sh | sh
+
+# Download some models
+ollama pull llama3.2:3b && ollama pull llama3.1:8b
+
+# Run benchmark
+git clone https://github.com/geerlingguy/ollama-benchmark.git
+cd ollama-benchmark
+./obench.sh
+```
+
+Note that Ollama will run on the CPU if no valid GPU / drivers are present. Be sure to note whether Ollama runs on the CPU, GPU, or a dedicated NPU.
 
 TODO: See [this issue](https://github.com/geerlingguy/sbc-reviews/issues/2) for discussion about a full suite of standardized GPU benchmarks.
 
