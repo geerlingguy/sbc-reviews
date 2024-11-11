@@ -36,6 +36,7 @@ All SBCs I have tested as part of this project are listed below. Click on the na
 | [Raspberry Pi Compute Module 4](https://github.com/geerlingguy/sbc-reviews/issues/8) | 2020 | Broadcom BCM2711 |
 | [Raspberry Pi 4 model B](https://github.com/geerlingguy/sbc-reviews/issues/4) | 2019 | Broadcom BCM2711 |
 | [Raspberry Pi 3 model B+](https://github.com/geerlingguy/sbc-reviews/issues/16) | 2018 | Boardcom BCM2837B0 |
+| [Libre Computer 'Le Potato'](https://github.com/geerlingguy/sbc-reviews/issues/17) | 2017 | Amlogic S905X |
 
 This table should be ordered by the date the board was launched, in descending order. I might add a CSV file (so it's still easy to manage by hand) which could be compiled into this README at some point in the future (that would also allow putting benchmark numbers directly into the CSV...).
 
