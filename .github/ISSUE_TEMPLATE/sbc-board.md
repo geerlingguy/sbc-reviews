@@ -88,7 +88,18 @@ Also consider running [PiBenchmarks.com script](https://www.jeffgeerling.com/blo
 3. Replace this block of text with the results.
 ```
 
-Note: This benchmark requires an active display on the device. Not all devices may be able to run `glmark2-es2`, so in that case, make a note and move on!
+### GravityMark
+
+GravityMark results:
+
+```
+1. Download the latest version of GravityMark: https://gravitymark.tellusim.com
+2. Run `chmod [downloaded_file.run]`
+3. Run `sudo ./[downloaded_file.run]` and press `y` to accept the terms.
+4. Open the link it prints, and run the Benchmark defaults, changing to 720p resolution and 50,000 asteroids.
+```
+
+Note: These benchmarks require an active display on the device. Not all devices may be able to run `glmark2-es2`, so in that case, make a note and move on!
 
 ### Ollama
 
