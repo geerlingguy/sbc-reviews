@@ -35,6 +35,7 @@ All SBCs I have tested as part of this project are listed below. Click on the na
 | [Radxa Rock 3 Compute Module](https://github.com/geerlingguy/sbc-reviews/issues/15) | 2021 | Rockchip RK3566 |
 | [Pine64 SOQuartz](https://github.com/geerlingguy/sbc-reviews/issues/7) | 2021 | Rockchip RK3566 |
 | [Raspberry Pi Compute Module 4](https://github.com/geerlingguy/sbc-reviews/issues/8) | 2020 | Broadcom BCM2711 |
+| [Raspberry Pi 400](https://github.com/geerlingguy/sbc-reviews/issues/59) | 2020 | Broadcom BCM2711 |
 | [Raspberry Pi 4 model B](https://github.com/geerlingguy/sbc-reviews/issues/4) | 2019 | Broadcom BCM2711 |
 | [Raspberry Pi 3 model B+](https://github.com/geerlingguy/sbc-reviews/issues/16) | 2018 | Boardcom BCM2837B0 |
 | [Libre Computer 'Le Potato'](https://github.com/geerlingguy/sbc-reviews/issues/17) | 2017 | Amlogic S905X |
