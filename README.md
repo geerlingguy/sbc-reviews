@@ -10,6 +10,7 @@ All SBCs I have tested as part of this project are listed below. Click on the na
 
 | SBC Name | Year Introduced | CPU |
 | --- | --- | --- |
+| [Raspberry Pi 500](https://github.com/geerlingguy/sbc-reviews/issues/60) | 2024 | Broadcom BCM2712 |
 | [Raspberry Pi CM5](https://github.com/geerlingguy/sbc-reviews/issues/58) | 2024 | Broadcom BCM2712 |
 | [Snapdragon Dev Kit](https://github.com/geerlingguy/sbc-reviews/issues/51) | 2024 | Snapdragon X Elite |
 | [Orange Pi 5 Max](https://github.com/geerlingguy/sbc-reviews/issues/49) | 2024 | Rockchip RK3588 |
