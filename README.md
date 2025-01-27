@@ -10,6 +10,9 @@ All SBCs I have tested as part of this project are listed below. Click on the na
 
 | SBC Name | Year Introduced | CPU |
 | --- | --- | --- |
+| [Radxa Orion O6](https://github.com/geerlingguy/sbc-reviews/issues/62) | 2025 | Cix CD8180 |
+| [HiFive Premier P550](https://github.com/geerlingguy/sbc-reviews/issues/65) | 2025 | ESWIN EIC7700X |
+| [GMKtec NucBox G3 Plus](https://github.com/geerlingguy/sbc-reviews/issues/64) | 2025 | Intel N150 |
 | [Raspberry Pi 500](https://github.com/geerlingguy/sbc-reviews/issues/60) | 2024 | Broadcom BCM2712 |
 | [Raspberry Pi CM5](https://github.com/geerlingguy/sbc-reviews/issues/58) | 2024 | Broadcom BCM2712 |
 | [Snapdragon Dev Kit](https://github.com/geerlingguy/sbc-reviews/issues/51) | 2024 | Snapdragon X Elite |
@@ -70,6 +73,18 @@ The primary benchmarks I run are:
   - Network: `iperf3` (upstream, downstream, and bidirectional)
 
 I often test a variety of other board-specific features, too, though it depends on the amount of time I'm willing to devote to a specific board, whether I'll deep-dive or just get basic numbers.
+
+## Benchmark Scripts
+
+The benchmark scripts are run using `pyinfra`. It can be installed with `pip3 install pyinfra`.
+
+Inside the `benchmark` directory, modify `inventory.py` to point at the system under test, and run:
+
+```
+pyinfra inventory.py main.py -y
+```
+
+This assumes you've already configured an SSH connection to the system under test.
 
 ## SBC Awards
 
