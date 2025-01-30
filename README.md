@@ -86,6 +86,8 @@ pyinfra inventory.py main.py -y
 
 This assumes you've already configured an SSH connection to the system under test.
 
+> Note: There is a parallel set of benchmarking scripts in the `benchmark-ansible` folder. Right now I'm setting up both side by side to do essentially the same thing, but I wanted to give Pyinfra a try since I hadn't used it for any 'production' scenario before.
+
 ## SBC Awards
 
 I'm considering crowning certain SBCs with awards every year, like "Fastest storage" or "least functionality." That seems like it could be a fun way to blow off steam when I'm having a terrible experience, or celebrate some truly groundbreaking new features...
