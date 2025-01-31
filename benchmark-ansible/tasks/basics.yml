@@ -1,0 +1,16 @@
+---
+- name: Retrieve kernel information.
+  ansible.builtin.command: uname -a
+  register: uname_output
+
+- name: Print kernel information.
+  ansible.builtin.debug:
+    var: uname_output.stdout
+
+- name: Run screenfetch.
+  ansible.builtin.command: screenfetch -N
+  register: screenfetch_output
+
+- name: Print screenfetch.
+  ansible.builtin.debug:
+    var: screenfetch_output.stdout

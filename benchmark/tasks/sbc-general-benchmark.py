@@ -1,0 +1,27 @@
+import os
+from pyinfra import logger
+from pyinfra.operations import files, python, server
+
+php_version="8.3"
+working_dir=os.path.expanduser("~") + "/Downloads"
+
+files.download(
+    name="Download sbc-general-benchmark script",
+    src="https://gist.githubusercontent.com/geerlingguy/570e13f4f81a40a5395688667b1f79af/raw/sbc-general-benchmark.sh",
+    dest="{}/sbc-general-benchmark.sh".format(working_dir),
+)
+
+general_benchmark_result = server.shell(
+    name="Run sbc-general-benchmark.sh",
+    commands="sh {}/sbc-general-benchmark.sh".format(working_dir),
+    _env={'PHP_VERSION': '8.3'},
+    _sudo=True,
+)
+
+def callback():
+    logger.info(f"\n\n{general_benchmark_result.stdout}\n")
+
+python.call(
+    name="Print sbc-general-benchmark.sh result",
+    function=callback,
+)

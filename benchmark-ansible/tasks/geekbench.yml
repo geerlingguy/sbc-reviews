@@ -1,0 +1,11 @@
+---
+# TODO:
+#   - Arm: https://cdn.geekbench.com/Geekbench-6.3.0-LinuxARMPreview.tar.gz
+#   - RISC-V: https://cdn.geekbench.com/Geekbench-6.3.0-LinuxRISCVPreview.tar.gz
+- name: Download Geekbench.
+  ansible.builtin.unarchive:
+    src: https://cdn.geekbench.com/Geekbench-6.3.0-Linux.tar.gz
+    dest: ~/Downloads
+    remote_src: yes
+
+# TODO

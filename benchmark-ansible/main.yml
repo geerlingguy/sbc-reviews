@@ -1,0 +1,33 @@
+---
+- name: Benchmark an SBC.
+  hosts: all
+  become: false
+
+  pre_tasks:
+    - name: Ensure apt cache is up to date.
+      ansible.builtin.apt:
+        update_cache: true
+        cache_valid_time: 3600
+      when: ansible_facts.os_family == "Debian"
+      become: true
+
+    - name: Install prerequisites.
+      ansible.builtin.package:
+        name:
+          - screenfetch
+      become: true
+
+    - name: Ensure Downloads folder exists.
+      ansible.builtin.file:
+        path: ~/Downloads
+        state: directory
+
+  tasks:
+    - name: Get basic system information.
+      ansible.builtin.import_tasks: tasks/basics.yml
+
+    - name: Run Geekbench.
+      ansible.builtin.import_tasks: tasks/geekbench.yml
+
+    - name: Run tinymembench.
+      ansible.builtin.import_tasks: tasks/tinymembench.yml

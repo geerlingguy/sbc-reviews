@@ -1,0 +1,18 @@
+---
+# Tinymembench.
+- name: Clone tinymembench from GitHub.
+  ansible.builtin.git:
+    repo: https://github.com/rojaster/tinymembench.git
+    dest: ~/Downloads/tinymembench
+
+- name: Build tinymembench
+  community.general.make:
+    chdir: ~/Downloads/tinymembench
+
+- name: Run tinymembench.
+  ansible.builtin.command: ~/Downloads/tinymembench/tinymembench
+  register: tinymembench_output
+
+- name: Print tinymembench.
+  ansible.builtin.debug:
+    var: tinymembench_output.stdout
