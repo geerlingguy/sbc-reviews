@@ -4,7 +4,7 @@ from pyinfra.facts.hardware import Memory
 from pyinfra.facts.server import Home
 from pyinfra.operations import files, git, python, server
 
-host_ram_size=host.get_fact(Memory, )
+host_ram_size=host.get_fact(Memory)
 working_dir=host.get_fact(Home) + "/Downloads"
 ollama_models={
     'llama3.2:3b': 2000,
@@ -23,6 +23,7 @@ files.download(
 )
 
 # Check if Ollama is already installed.
+# TODO: This is checking on my local Mac. Need to check on the host!
 rc = subprocess.call(['which', 'ollama'])
 if rc == 1:
     server.shell(

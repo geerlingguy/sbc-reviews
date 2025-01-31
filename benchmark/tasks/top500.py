@@ -4,6 +4,10 @@ from pyinfra.facts.server import Home
 
 working_dir=host.get_fact(Home) + "/Downloads"
 
+# TODO: Make this dynamic based on CPU core count?
+hpl_ps=2
+hpl_qs=4
+
 git.repo(
     name="Clone top500 with git.",
     src="https://github.com/geerlingguy/top500-benchmark.git",
@@ -17,7 +21,6 @@ apt.packages(
     _sudo=True,
 )
 
-# TODO: Dynamically set Python version here. (3.11/3.12...)
 for python_version in ["3.11", "3.12"]:
     files.file(
         name="Remove Python {} EXTERNALLY-MANAGED file".format(python_version),
@@ -39,7 +42,19 @@ server.shell(
     ],
 )
 
-# TODO: Modify config.yml, hpl_dat_opts for Ps and Qs...
+# Mind your Ps and Qs.
+files.line(
+    name="Mind your Ps",
+    path="{}/top500-benchmark/config.yml".format(working_dir),
+    line=r"  Ps: .",
+    replace="  Ps: {}".format(hpl_ps),
+)
+files.line(
+    name="Mind your Qs",
+    path="{}/top500-benchmark/config.yml".format(working_dir),
+    line=r"  Qs: .",
+    replace="  Qs: {}".format(hpl_qs),
+)
 
 # TODO: It'd be nice to get live output from this command...
 top500_result = server.shell(
