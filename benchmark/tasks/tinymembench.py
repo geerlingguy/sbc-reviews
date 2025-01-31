@@ -1,20 +1,23 @@
-from pyinfra import logger
+from pyinfra import host, logger
 from pyinfra.operations import git, python, server
+from pyinfra.facts.server import Home
+
+working_dir=host.get_fact(Home) + "/Downloads"
 
 git.repo(
     name="Clone tinymembench with git.",
     src="https://github.com/rojaster/tinymembench.git",
-    dest="{working_dir}/tinymembench",
+    dest="{}/tinymembench".format(working_dir),
 )
 
 server.shell(
     name="Build tinymembench",
-    commands="cd {working_dir}/tinymembench && make",
+    commands="cd {}/tinymembench && make".format(working_dir),
 )
 
 tinymembench_result = server.shell(
     name="Run tinymembench",
-    commands="{working_dir}/tinymembench/tinymembench",
+    commands="{}/tinymembench/tinymembench".format(working_dir),
 )
 
 def callback():

@@ -1,9 +1,9 @@
-import os
-from pyinfra import logger
+from pyinfra import host, logger
 from pyinfra.operations import files, python, server
+from pyinfra.facts.server import Home
 
 php_version="8.3"
-working_dir=os.path.expanduser("~") + "/Downloads"
+working_dir=host.get_fact(Home) + "/Downloads"
 
 disk_info = server.shell(
     name="Retrieve disk info",

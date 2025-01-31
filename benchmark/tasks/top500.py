@@ -1,8 +1,8 @@
-import os
-from pyinfra import logger
+from pyinfra import host, logger
 from pyinfra.operations import apt, files, git, pip, python, server
+from pyinfra.facts.server import Home
 
-working_dir=os.path.expanduser("~") + "/Downloads"
+working_dir=host.get_fact(Home) + "/Downloads"
 
 git.repo(
     name="Clone top500 with git.",
@@ -18,12 +18,13 @@ apt.packages(
 )
 
 # TODO: Dynamically set Python version here. (3.11/3.12...)
-files.file(
-    name="Ensure we can manage our own Python environment",
-    path="/usr/lib/python3.12/EXTERNALLY-MANAGED",
-    present=False,
-    _sudo=True,
-)
+for python_version in ["3.11", "3.12"]:
+    files.file(
+        name="Remove Python {} EXTERNALLY-MANAGED file".format(python_version),
+        path="/usr/lib/python{}/EXTERNALLY-MANAGED".format(python_version),
+        present=False,
+        _sudo=True,
+    )
 
 pip.packages(
     name="Install Ansible",

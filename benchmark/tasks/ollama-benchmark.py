@@ -1,11 +1,11 @@
-import os
 import subprocess
 from pyinfra import host, logger
 from pyinfra.facts.hardware import Memory
+from pyinfra.facts.server import Home
 from pyinfra.operations import files, git, python, server
 
 host_ram_size=host.get_fact(Memory, )
-working_dir=os.path.expanduser("~") + "/Downloads"
+working_dir=host.get_fact(Home) + "/Downloads"
 ollama_models={
     'llama3.2:3b': 2000,
     'llama3.1:8b': 4900,

@@ -1,2 +1,4 @@
-ssh_user = "jgeerling"
-my_hosts = ["10.0.2.247"]
+hosts = (
+    ["10.0.2.212"],
+    {"ssh_user": "radxa"},
+)

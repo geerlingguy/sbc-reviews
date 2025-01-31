@@ -14,6 +14,9 @@ apt.packages(
         "git",
         "screenfetch",
         "iperf3",
+        "stress-ng",
+        "s-tui",
+        "btop",
     ],
     _sudo=True,
 )
@@ -28,9 +31,9 @@ files.directory(
 )
 
 local.include("tasks/basics.py")
-local.include("tasks/tinymembench.py")
-local.include("tasks/geekbench.py")
+# local.include("tasks/tinymembench.py")
+# local.include("tasks/geekbench.py")
+# local.include("tasks/disk-benchmark.py")
 local.include("tasks/top500.py")
 local.include("tasks/ollama-benchmark.py")
 local.include("tasks/sbc-general-benchmark.py")
-local.include("tasks/disk-benchmark.py")

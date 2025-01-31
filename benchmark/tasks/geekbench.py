@@ -1,13 +1,24 @@
-import os
-from pyinfra import logger
+from pyinfra import host, logger
 from pyinfra.operations import files, python, server
+from pyinfra.facts.server import Arch, Home
 
-working_dir=os.path.expanduser("~") + "/Downloads"
-# TODO: Use `host.get_fact(Arch)` to pick file?
-#   - Arm: https://cdn.geekbench.com/Geekbench-6.4.0-LinuxARMPreview.tar.gz
-#   - RISC-V: https://cdn.geekbench.com/Geekbench-6.4.0-LinuxRISCVPreview.tar.gz
-#   - AMD64: https://cdn.geekbench.com/Geekbench-6.4.0-Linux.tar.gz
-download_file="Geekbench-6.4.0-Linux.tar.gz"
+working_dir=host.get_fact(Home) + "/Downloads"
+
+# Pick the proper download based on host architecture.
+host_arch = host.get_fact(Arch)
+match host_arch:
+    case 'x86_64':
+        download_file="Geekbench-6.4.0-Linux.tar.gz"
+    case 'aarch64':
+        download_file="Geekbench-6.4.0-LinuxARMPreview.tar.gz"
+    case 'riscv64':
+        download_file="Geekbench-6.4.0-LinuxRISCVPreview.tar.gz"
+    case _:
+        python.raise_exception(
+            name="Raise host not supported exception",
+            exception=NotImplementedError,
+            message="Host architecture {} is not supported yet.".format(host_arch),
+        )
 
 files.download(
     name="Download Geekbench",
