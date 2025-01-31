@@ -14,7 +14,7 @@ files.download(
 general_benchmark_result = server.shell(
     name="Run sbc-general-benchmark.sh",
     commands="sh {}/sbc-general-benchmark.sh".format(working_dir),
-    _env={'PHP_VERSION': '8.3'},
+    _env={'PHP_VERSION': php_version},
     _sudo=True,
 )
 
