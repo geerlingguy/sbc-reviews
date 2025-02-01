@@ -86,6 +86,14 @@ pyinfra inventory.py main.py -y
 
 This assumes you've already configured an SSH connection to the system under test.
 
+You can run individual benchmarks separately by calling the task files individually:
+
+```
+pyinfra inventory.py tasks/tinymembench.py -y
+```
+
+Make sure you've run at least `tasks/setup.py` prior to running any other tasks, if not running `main.py`.
+
 > Note: There is a parallel set of benchmarking scripts in the `benchmark-ansible` folder. Right now I'm setting up both side by side to do essentially the same thing, but I wanted to give Pyinfra a try since I hadn't used it for any 'production' scenario before.
 
 ## SBC Awards
