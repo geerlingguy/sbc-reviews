@@ -5,7 +5,7 @@ from pyinfra.facts.server import Home
 working_dir=host.get_fact(Home) + "/Downloads"
 
 # TODO: Make this dynamic based on CPU core count?
-hpl_ps=2
+hpl_ps=1
 hpl_qs=4
 
 git.repo(
