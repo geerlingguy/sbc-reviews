@@ -62,10 +62,10 @@ top500_result = server.shell(
     commands="cd {}/top500-benchmark && ~/.local/bin/ansible-playbook main.yml --tags 'setup,benchmark'".format(working_dir),
 )
 
-def callback():
+def top500_result_callback():
     logger.info(f"\n```\n{top500_result.stdout}\n```")
 
 python.call(
     name="Print top500 playbook result",
-    function=callback,
+    function=top500_result_callback,
 )

@@ -36,10 +36,10 @@ geekbench_result = server.shell(
     commands="{}/{}/geekbench6".format(working_dir, download_file.replace('.tar.gz', '')),
 )
 
-def callback():
+def geekbench_result_callback():
     logger.info(f"\n```\n{geekbench_result.stdout}\n```")
 
 python.call(
     name="Print Geekbench result",
-    function=callback,
+    function=geekbench_result_callback,
 )

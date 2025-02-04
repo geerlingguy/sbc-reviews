@@ -20,10 +20,10 @@ tinymembench_result = server.shell(
     commands="{}/tinymembench/tinymembench".format(working_dir),
 )
 
-def callback():
+def tinymembench_result_callback():
     logger.info(f"\n```\n{tinymembench_result.stdout}\n```")
 
 python.call(
     name="Print tinymembench results",
-    function=callback,
+    function=tinymembench_result_callback,
 )

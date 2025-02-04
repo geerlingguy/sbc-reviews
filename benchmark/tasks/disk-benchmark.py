@@ -34,10 +34,10 @@ disk_benchmark_result = server.shell(
     _sudo=True,
 )
 
-def callback():
+def disk_benchmark_callback():
     logger.info(f"\n{disk_benchmark_result.stdout}\n")
 
 python.call(
     name="Print disk-benchmark.sh result",
-    function=callback,
+    function=disk_benchmark_callback,
 )

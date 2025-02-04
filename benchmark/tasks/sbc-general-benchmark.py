@@ -2,7 +2,7 @@ from pyinfra import host, logger
 from pyinfra.operations import files, python, server
 from pyinfra.facts.server import Home
 
-php_version="8.2"
+php_version="8.3"
 working_dir=host.get_fact(Home) + "/Downloads"
 
 files.download(
@@ -18,10 +18,10 @@ general_benchmark_result = server.shell(
     _sudo=True,
 )
 
-def callback():
+def sbc_general_result_callback():
     logger.info(f"\n\n{general_benchmark_result.stdout}\n")
 
 python.call(
     name="Print sbc-general-benchmark.sh result",
-    function=callback,
+    function=sbc_general_result_callback,
 )

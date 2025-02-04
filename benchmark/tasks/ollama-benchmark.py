@@ -1,7 +1,6 @@
-import subprocess
 from pyinfra import host, logger
 from pyinfra.facts.hardware import Memory
-from pyinfra.facts.server import Home
+from pyinfra.facts.server import File, Home
 from pyinfra.operations import files, git, python, server
 
 host_ram_size=host.get_fact(Memory)
@@ -22,10 +21,8 @@ files.download(
     dest="{}/install.sh".format(working_dir),
 )
 
-# Check if Ollama is already installed.
-# TODO: This is checking on my local Mac. Need to check on the host!
-rc = subprocess.call(['which', 'ollama'])
-if rc == 1:
+# Install Ollama if necessary.
+if not host.get_fact(File, path='/usr/local/bin/ollama'):
     server.shell(
         name="Run Ollama Install Script",
         commands="sh {}/install.sh".format(working_dir),
@@ -37,8 +34,7 @@ git.repo(
     dest="{}/ollama-benchmark".format(working_dir),
 )
 
-# Callback
-def callback():
+def ollama_loop_callback():
     for model, model_size in ollama_models.items():
         # Skip a model if it's larger than the system RAM.
         if (host_ram_size - (host_ram_size / 8)) < model_size:
@@ -59,5 +55,5 @@ def callback():
 
 python.call(
     name="Execute Ollama loop",
-    function=callback,
+    function=ollama_loop_callback,
 )
