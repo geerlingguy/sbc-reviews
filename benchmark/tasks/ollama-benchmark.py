@@ -1,6 +1,7 @@
 from pyinfra import host, logger
+from pyinfra.facts.files import File
 from pyinfra.facts.hardware import Memory
-from pyinfra.facts.server import File, Home
+from pyinfra.facts.server import Home
 from pyinfra.operations import files, git, python, server
 
 host_ram_size=host.get_fact(Memory)
