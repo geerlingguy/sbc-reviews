@@ -1,7 +1,7 @@
 from pyinfra import host, logger
 from pyinfra.facts.files import File
 from pyinfra.facts.hardware import Memory
-from pyinfra.facts.server import Home
+from pyinfra.facts.server import Arch, Home
 from pyinfra.operations import files, git, python, server
 
 host_ram_size=host.get_fact(Memory)
@@ -22,12 +22,15 @@ files.download(
     dest="{}/install.sh".format(working_dir),
 )
 
-# Install Ollama if necessary.
-if not host.get_fact(File, path='/usr/local/bin/ollama'):
-    server.shell(
-        name="Run Ollama Install Script",
-        commands="sh {}/install.sh".format(working_dir),
-    )
+# Install Ollama if necessary (but not on RISC-V, for now). For RISC-V, see:
+# https://github.com/geerlingguy/sbc-reviews/issues/65#issuecomment-2637866212
+host_arch = host.get_fact(Arch)
+if not host_arch == 'riscv64':
+    if not host.get_fact(File, path='/usr/local/bin/ollama'):
+        server.shell(
+            name="Run Ollama Install Script",
+            commands="sh {}/install.sh".format(working_dir),
+        )
 
 git.repo(
     name="Clone ollama-benchmark with git.",
