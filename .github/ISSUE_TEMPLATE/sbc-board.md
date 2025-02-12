@@ -88,6 +88,18 @@ Also consider running [PiBenchmarks.com script](https://www.jeffgeerling.com/blo
 3. Replace this block of text with the results.
 ```
 
+### vkmark
+
+`vkmark` results:
+
+```
+1. Install vkmark with `sudo apt install -y vkmark`
+2. Run `vkmark` (with `DISPLAY=:0` prepended if running over SSH)
+3. Replace this block of text with the results.
+```
+
+> **Note**: `vkmark` needs to be compiled from source on Debian 12 and earlier.
+
 ### GravityMark
 
 GravityMark results:
