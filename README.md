@@ -28,15 +28,7 @@ For every board I test or review, I will open an Issue with the name of the SBC,
 
 If you would like to see a board added that is not already listed, **please start a new [Discussion](https://github.com/geerlingguy/sbc-reviews/discussions)**—do not open an Issue until I have confirmed I am going to acquire and test a certain board.
 
-The primary benchmarks I run are:
-
-  - CPU: [Geekbench 5](https://www.geekbench.com/download/)
-  - CPU: [Top500 HPL](https://github.com/geerlingguy/top500-benchmark)
-  - GPU: TODO
-  - Memory: `tinymembench`
-  - Disk: [`disk-benchmark.sh`](https://github.com/geerlingguy/pi-cluster/blob/master/benchmarks/disk-benchmark.sh)
-  - Disk: [PiBenchmarks.com](https://pibenchmarks.com)
-  - Network: `iperf3` (upstream, downstream, and bidirectional)
+A list of _all_ the tests I attempt to run on a board is contained in the [sbc-board.md Issue Template](/.github/ISSUE_TEMPLATE/sbc-board.md).
 
 I often test a variety of other board-specific features, too, though it depends on the amount of time I'm willing to devote to a specific board, whether I'll deep-dive or just get basic numbers.
 
