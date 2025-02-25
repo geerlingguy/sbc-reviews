@@ -10,45 +10,7 @@ TODO: I am working on moving the data within this repository into a static websi
 
 ## List of SBCs
 
-All SBCs I have tested as part of this project are listed below. Click on the name of the SBC to view all the testing and benchmarking details.
-
-| SBC Name | Year Introduced | CPU |
-| --- | --- | --- |
-| [Radxa Orion O6](https://github.com/geerlingguy/sbc-reviews/issues/62) | 2025 | Cix CD8180 |
-| [HiFive Premier P550](https://github.com/geerlingguy/sbc-reviews/issues/65) | 2025 | ESWIN EIC7700X |
-| [GMKtec NucBox G3 Plus](https://github.com/geerlingguy/sbc-reviews/issues/64) | 2025 | Intel N150 |
-| [Raspberry Pi 500](https://github.com/geerlingguy/sbc-reviews/issues/60) | 2024 | Broadcom BCM2712 |
-| [Raspberry Pi CM5](https://github.com/geerlingguy/sbc-reviews/issues/58) | 2024 | Broadcom BCM2712 |
-| [Snapdragon Dev Kit](https://github.com/geerlingguy/sbc-reviews/issues/51) | 2024 | Snapdragon X Elite |
-| [Orange Pi 5 Max](https://github.com/geerlingguy/sbc-reviews/issues/49) | 2024 | Rockchip RK3588 |
-| [Radxa X4](https://github.com/geerlingguy/sbc-reviews/issues/48) | 2024 | Intel N100 |
-| [Milk-V Jupiter](https://github.com/geerlingguy/sbc-reviews/issues/47) | 2024 | Spacemit X60 |
-| [Milk-V Mars](https://github.com/geerlingguy/sbc-reviews/issues/46) | 2024 | StarFive JH7110 |
-| [LattePanda Mu](https://github.com/geerlingguy/sbc-reviews/issues/42) | 2024 | Intel N100 |
-| [Radxa Rock 5C](https://github.com/geerlingguy/sbc-reviews/issues/41) | 2024 | Rockchip RK3588S2 |
-| [Radxa CM5](https://github.com/geerlingguy/sbc-reviews/issues/40) | 2024 | Rockchip RK3588S2 |
-| [Lichee Console 4A](https://github.com/geerlingguy/sbc-reviews/issues/39) | 2024 | T-Head TH1520 |
-| [Turing Pi RK1](https://github.com/geerlingguy/sbc-reviews/issues/38) | 2024 | Rockchip RK3588 |
-| [Orange Pi Zero 2W](https://github.com/geerlingguy/sbc-reviews/issues/33) | 2023 | Allwinner H618 |
-| [Luckfox Core3566](https://github.com/geerlingguy/sbc-reviews/issues/27) | 2023 | Rockchip RK3566 |
-| [Orange Pi Compute Module 4](https://github.com/geerlingguy/sbc-reviews/issues/26) | 2023 | Rockchip RK3566 |
-| [Milk-V Mars CM](https://github.com/geerlingguy/sbc-reviews/issues/22) | 2023 | StarFive JH7110 |
-| [Raspberry Pi 5 model B](https://github.com/geerlingguy/sbc-reviews/issues/21) | 2023 | Broadcom BCM2712 |
-| [Ampere Altra Developer Platform](https://github.com/geerlingguy/sbc-reviews/issues/19) | 2023 | Ampere Altra |
-| [Radxa Rock 5 model B](https://github.com/geerlingguy/sbc-reviews/issues/3) | 2023 | Rockchip RK3588 |
-| [Orange Pi 5](https://github.com/geerlingguy/sbc-reviews/issues/5) | 2023 | Rockchip RK3588S |
-| [Banana Pi BPI-CM4](https://github.com/geerlingguy/sbc-reviews/issues/11) | 2022 | Amlogic A311D |
-| [StarFive VisionFive 2](https://github.com/geerlingguy/sbc-reviews/issues/10) | 2022 | StarFive JH7110 |
-| [BigTreeTech CB1](https://github.com/geerlingguy/sbc-reviews/issues/28) | 2022 | Allwinner H616 |
-| [Radxa Rock 3 Compute Module](https://github.com/geerlingguy/sbc-reviews/issues/15) | 2021 | Rockchip RK3566 |
-| [Pine64 SOQuartz](https://github.com/geerlingguy/sbc-reviews/issues/7) | 2021 | Rockchip RK3566 |
-| [Raspberry Pi Compute Module 4](https://github.com/geerlingguy/sbc-reviews/issues/8) | 2020 | Broadcom BCM2711 |
-| [Raspberry Pi 400](https://github.com/geerlingguy/sbc-reviews/issues/59) | 2020 | Broadcom BCM2711 |
-| [Raspberry Pi 4 model B](https://github.com/geerlingguy/sbc-reviews/issues/4) | 2019 | Broadcom BCM2711 |
-| [Raspberry Pi 3 model B+](https://github.com/geerlingguy/sbc-reviews/issues/16) | 2018 | Boardcom BCM2837B0 |
-| [Libre Computer 'Le Potato'](https://github.com/geerlingguy/sbc-reviews/issues/17) | 2017 | Amlogic S905X |
-
-This table should be ordered by the date the board was launched, in descending order. I might add a CSV file (so it's still easy to manage by hand) which could be compiled into this README at some point in the future (that would also allow putting benchmark numbers directly into the CSV...).
+The list of SBCs has been moved to the [SBC Reviews website](https://sbc-reviews.jeffgeerling.com).
 
 ## Motivation
 
