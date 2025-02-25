@@ -54,12 +54,13 @@ jobs:
           HUGO_ENVIRONMENT: production
         run: |
           hugo \
+            --source web \
             --minify \
             --baseURL "${{ steps.pages.outputs.base_url }}/"
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./public
+          path: ./web/public
 
   # Deployment job
   deploy:

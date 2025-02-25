@@ -4,6 +4,10 @@ Jeff Geerling's SBC (Single-Board Computer) review and benchmarking data repo.
 
 There are many like it, but this one is mine.
 
+## Website
+
+TODO: I am working on moving the data within this repository into a static website for easier browsing and so I can more easily link to the information. This process will take some time. Visit the site at [https://sbc-reviews.jeffgeerling.com/](https://sbc-reviews.jeffgeerling.com/).
+
 ## List of SBCs
 
 All SBCs I have tested as part of this project are listed below. Click on the name of the SBC to view all the testing and benchmarking details.
@@ -95,6 +99,14 @@ pyinfra inventory.py tasks/tinymembench.py -y
 Make sure you've run at least `tasks/setup.py` prior to running any other tasks, if not running `main.py`.
 
 > Note: There is a parallel set of benchmarking scripts in the `benchmark-ansible` folder. Right now I'm setting up both side by side to do essentially the same thing, but I wanted to give Pyinfra a try since I hadn't used it for any 'production' scenario before.
+
+## Building the Website
+
+The website is generated with Hugo. Check out [Hugo's installation guide](https://gohugo.io/installation/).
+
+Change directories into `web` and run `hugo server` to run to run a local development environment and preview the site.
+
+The website is built using GitHub Actions, with the configuration stored inside `.github/workflows/hugo.yml`.
 
 ## SBC Awards
 

@@ -1,0 +1,9 @@
+# Hugo resources
+/web/public/
+/web/resources/_gen/
+/web/assets/jsconfig.json
+/web/hugo_stats.json
+/web/hugo.exe
+/web/hugo.darwin
+/web/hugo.linux
+/web/.hugo_build.lock

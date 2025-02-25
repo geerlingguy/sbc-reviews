@@ -1,0 +1,8 @@
+baseURL = 'https://sbc-reviews.jeffgeerling.com'
+languageCode = 'en-us'
+title = 'SBC Reviews'
+
+theme = 'hugo-book'
+[params]
+  BookTheme = 'auto'
+  BookSection = 'reviews'
