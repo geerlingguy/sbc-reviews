@@ -98,7 +98,7 @@ Also consider running [PiBenchmarks.com script](https://www.jeffgeerling.com/blo
 3. Replace this block of text with the results.
 ```
 
-> **Note**: `vkmark` needs to be compiled from source on Debian 12 and earlier.
+> **Note**: `vkmark` needs to be [compiled from source](https://github.com/geerlingguy/sbc-reviews/issues/76) on Debian 12 and earlier.
 
 ### GravityMark
 
