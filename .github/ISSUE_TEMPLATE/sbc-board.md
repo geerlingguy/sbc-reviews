@@ -106,8 +106,8 @@ GravityMark results:
 
 ```
 1. Download the latest version of GravityMark: https://gravitymark.tellusim.com
-2. Run `chmod [downloaded_file.run]`
-3. Run `sudo ./[downloaded_file.run]` and press `y` to accept the terms.
+2. Run `chmod +x [downloaded_filename].run`
+3. Run `sudo ./[downloaded_filename].run` and press `y` to accept the terms.
 4. Open the link it prints, and run the Benchmark defaults, changing to 720p resolution and 50,000 asteroids.
 ```
 
