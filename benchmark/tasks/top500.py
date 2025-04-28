@@ -21,7 +21,7 @@ apt.packages(
     _sudo=True,
 )
 
-for python_version in ["3.11", "3.12"]:
+for python_version in ["3.11", "3.12", "3.13"]:
     files.file(
         name="Remove Python {} EXTERNALLY-MANAGED file".format(python_version),
         path="/usr/lib/python{}/EXTERNALLY-MANAGED".format(python_version),

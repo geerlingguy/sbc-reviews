@@ -1,4 +1,4 @@
 hosts = (
-    ["10.0.2.242"],
-    {"ssh_user": "pi"},
+    ["10.0.2.212"],
+    {"ssh_user": "jgeerling"},
 )

@@ -3,8 +3,8 @@ import time
 from pyinfra import host, local, logger
 from pyinfra.operations import python
 
-# See: https://github.com/geerlingguy/sbc-reviews/issues/67
-sys.setrecursionlimit(2000)
+# Minimum Python version: 3.10.
+assert sys.version_info >= (3, 10)
 
 pause_seconds = 60
 tasks = [
@@ -12,8 +12,8 @@ tasks = [
     'geekbench.py',
     'disk-benchmark.py',
     'top500.py',
-    'ollama-benchmark.py',
     'sbc-general-benchmark.py',
+    'ollama-benchmark.py',
 ]
 
 local.include("tasks/setup.py")
@@ -21,9 +21,10 @@ local.include("tasks/basics.py")
 
 
 def task_callback():
-    for task in tasks:
-        logger.info("\n\nPausing {} seconds for cooldown...\n".format(pause_seconds))
-        time.sleep(pause_seconds)
+    for i, task in enumerate(tasks):
+        if i != 0:
+            logger.info("\n\nPausing {} seconds for cooldown...\n".format(pause_seconds))
+            time.sleep(pause_seconds)
         local.include("tasks/{}".format(task))
 
 
