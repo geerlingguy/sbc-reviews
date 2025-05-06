@@ -5,6 +5,7 @@ uname_info = server.shell(
     commands=["uname -a"],
 )
 
+# TODO: Update to fastfetch, which is a little tricky on Debian < 13 and Ubuntu.
 screenfetch_info = server.shell(
     commands=["screenfetch"],
 )
