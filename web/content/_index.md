@@ -31,6 +31,7 @@ For now, this manually-curated list just links back to GitHub Issues, one for ea
 | [Lichee Console 4A](https://github.com/geerlingguy/sbc-reviews/issues/39) | 2024 | T-Head TH1520 |
 | [Turing Pi RK1](https://github.com/geerlingguy/sbc-reviews/issues/38) | 2024 | Rockchip RK3588 |
 | [Orange Pi Zero 2W](https://github.com/geerlingguy/sbc-reviews/issues/33) | 2023 | Allwinner H618 |
+| [Sipeed LonganPi 3H / LM3H](https://github.com/geerlingguy/sbc-reviews/issues/79) | 2023 | Allwinner H618 |
 | [Luckfox Core3566](https://github.com/geerlingguy/sbc-reviews/issues/27) | 2023 | Rockchip RK3566 |
 | [Orange Pi Compute Module 4](https://github.com/geerlingguy/sbc-reviews/issues/26) | 2023 | Rockchip RK3566 |
 | [Milk-V Mars CM](https://github.com/geerlingguy/sbc-reviews/issues/22) | 2023 | StarFive JH7110 |
