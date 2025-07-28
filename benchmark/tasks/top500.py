@@ -1,11 +1,13 @@
 from pyinfra import host, logger
-from pyinfra.operations import apt, files, git, pip, python, server
-from pyinfra.facts.server import Home
+from pyinfra.operations import apt, dnf, files, git, pip, python, server
+from pyinfra.facts.server import Home, LinuxName
 
 working_dir=host.get_fact(Home) + "/Downloads"
+linux_name=host.get_fact(LinuxName)
 
 # TODO: Make this dynamic based on CPU core count?
-hpl_ps=1
+# See: https://gist.github.com/CJCShadowsan/94efdf21539f3156414c1224b1c76605
+hpl_ps=4
 hpl_qs=4
 
 git.repo(
@@ -14,12 +16,20 @@ git.repo(
     dest="{}/top500-benchmark".format(working_dir),
 )
 
-apt.packages(
-    name="Install Ansible dependencies",
-    packages=["python3-pip"],
-    update=True,
-    _sudo=True,
-)
+if linux_name in ["Debian", "Ubuntu"]:
+    apt.packages(
+        name="Install Ansible dependencies (Debian).",
+        packages=["python3-pip"],
+        update=True,
+        _sudo=True,
+    )
+
+if linux_name in ["CentOS", "RedHat", "Fedora"]:
+    dnf.packages(
+        name="Install Ansible dependencies (RedHat).",
+        packages=["python3-pip", "python3-libdnf5"],
+        _sudo=True,
+    )
 
 for python_version in ["3.11", "3.12", "3.13"]:
     files.file(

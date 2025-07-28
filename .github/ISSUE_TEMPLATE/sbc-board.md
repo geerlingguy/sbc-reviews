@@ -122,12 +122,17 @@ Note: These benchmarks require an active display on the device. Not all devices 
 curl -fsSL https://ollama.com/install.sh | sh
 
 # Download some models
-ollama pull llama3.2:3b && ollama pull llama3.1:8b
+ollama pull llama3.2:3b \
+  && ollama pull llama3.1:8b \
+  && ollama pull llama2:13b
 
-# Run benchmark
+# Download the benchmarking script
 git clone https://github.com/geerlingguy/ollama-benchmark.git
 cd ollama-benchmark
-./obench.sh
+
+# Run benchmark on multiple models
+declare -a models=("llama3.2:3b" "llama3.1:8b" "llama2:13b")
+for i in "${models[@]}"; do ./obench.sh -m "$i" -c 3 --markdown; done
 ```
 
 Note that Ollama will run on the CPU if no valid GPU / drivers are present. Be sure to note whether Ollama runs on the CPU, GPU, or a dedicated NPU.
