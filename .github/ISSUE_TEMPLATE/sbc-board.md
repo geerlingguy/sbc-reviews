@@ -113,9 +113,9 @@ GravityMark results:
 
 Note: These benchmarks require an active display on the device. Not all devices may be able to run `glmark2-es2`, so in that case, make a note and move on!
 
-### Ollama
+### AI / LLM Inference
 
-`ollama` LLM model inference results:
+Basic `ollama` LLM model inference results:
 
 ```
 # Install ollama
@@ -136,8 +136,6 @@ for i in "${models[@]}"; do ./obench.sh -m "$i" -c 3 --markdown; done
 ```
 
 Note that Ollama will run on the CPU if no valid GPU / drivers are present. Be sure to note whether Ollama runs on the CPU, GPU, or a dedicated NPU.
-
-TODO: See [this issue](https://github.com/geerlingguy/sbc-reviews/issues/2) for discussion about a full suite of standardized GPU benchmarks.
 
 ## Memory
 
