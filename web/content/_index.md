@@ -14,6 +14,7 @@ For now, this manually-curated list just links back to GitHub Issues, one for ea
 
 | SBC Name | Year Introduced | CPU |
 | --- | --- | --- |
+| [Raspberry Pi 500+](https://github.com/geerlingguy/sbc-reviews/issues/81) | 2025 | Broadcom BCM2712 |
 | [Framework Mainboard](https://github.com/geerlingguy/sbc-reviews/issues/80) | 2025 | AMD AI Max+ 395 |
 | [Radxa Orion O6](https://github.com/geerlingguy/sbc-reviews/issues/62) | 2025 | Cix CD8180 |
 | [HiFive Premier P550](https://github.com/geerlingguy/sbc-reviews/issues/65) | 2025 | ESWIN EIC7700X |
