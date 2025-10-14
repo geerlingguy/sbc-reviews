@@ -153,7 +153,7 @@ git clone https://github.com/rojaster/tinymembench.git && cd tinymembench && mak
 
 ### Core to Core Memory Latency
 
-[comment]: # If this is a new CPU/SoC, run [c2clat](https://gist.github.com/geerlingguy/842974c0e49c201c28f4be54a05cc89c) to generate a core to core memory access latency graph.
+[comment]: # (If this is a new CPU/SoC, run c2clat to generate a core to core memory access latency graph: https://gist.github.com/geerlingguy/842974c0e49c201c28f4be54a05cc89c)
 
 ## `sbc-bench` results
 
