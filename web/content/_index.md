@@ -57,3 +57,5 @@ For now, this manually-curated list just links back to GitHub Issues, one for ea
 ## About
 
 This website was created by [Jeff Geerling](https://www.jeffgeerling.com) and is generated using Hugo from the [sbc-reviews](https://github.com/geerlingguy/sbc-reviews) project on GitHub.
+
+See also: [SBC Compare](https://sbc.compare), by bret.dk.

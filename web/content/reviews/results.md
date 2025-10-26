@@ -14,3 +14,5 @@ This page contains a table with the most relevant benchmark results in one easy-
 Click on a table heading to sort by that value.
 
 {{< partial "result_table.html" >}}
+
+See also: [SBC Compare](https://sbc.compare), by bret.dk.
