@@ -1,0 +1,13 @@
+/* Custom styles for benchmark result table. */
+table {
+  width: 100%;
+}
+
+th,td {
+  white-space: nowrap;
+  text-align: left;
+}
+
+div {
+  display: inline-block;
+}

@@ -1,0 +1,41 @@
+
+<table class="sortable results-table" id="benchmark-results-table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Year</th>
+      <th>Arch</th>
+      <th>gb5 single</th>
+      <th>gb5 multi</th>
+      <th>gb6 single</th>
+      <th>gb6 multi</th>
+      <th>HPL Gflops</th>
+      <th>Power (Idle)</th>
+      <th>Power (stress)</th>
+      <th>Power (HPL)</th>
+      <th>Efficiency (HPL)</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{ range .Site.Data.results.items }}
+    <tr>
+      <td><a href="{{ .link }}">{{ .name }}</a></td>
+      <td>{{ .year }}</td>
+      <td>{{ .arch }}</td>
+      <td>{{ .geekbench_5.single }}</td>
+      <td>{{ .geekbench_5.multi }}</td>
+      <td>{{ .geekbench_6.single }}</td>
+      <td>{{ .geekbench_6.multi }}</td>
+      <td>{{ .hpl_gflops }}</td>
+      <td>{{ .power_watts.idle }}</td>
+      <td>{{ .power_watts.stress }}</td>
+      <td>{{ .power_watts.hpl }}</td>
+      {{ if and .power_watts.hpl (ne .power_watts.hpl 0) }}
+        <td>{{ printf "%.2f" (div (float .hpl_gflops) (float .power_watts.hpl)) }}</td>
+      {{ else }}
+        <td></td>
+      {{ end }}
+    </tr>
+    {{ end }}
+  </tbody>
+</table>

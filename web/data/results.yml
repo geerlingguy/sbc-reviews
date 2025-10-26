@@ -1,0 +1,517 @@
+---
+items:
+  - name: Libre Computer AML-S905X-CC (Le Potato)
+    arch: aarch64
+    link: https://github.com/geerlingguy/sbc-reviews/issues/17
+    year: 2017
+    geekbench_6:
+      single: null
+      multi: null
+    geekbench_5:
+      single: null
+      multi: null
+    hpl_gflops: null
+    power_watts:
+      idle: 1.3
+      stress: 2.4
+      geekbench: null
+      hpl: null
+    network_mbps:
+      primary: 94.7
+      wifi: null
+    gpu:
+      glmark2: null
+      vkmark: null
+      gravitymark: null
+    memory:
+      memcpy: null
+      memset: null
+    phoronix:
+      encode_mp3_sec: null
+      x264_1080p_fps: null
+      x264_4k_fps: null
+      phpbench: null
+      linux_recompile_sec: null
+
+  - name: Raspberry Pi 3 model B+
+    arch: aarch64
+    link: https://github.com/geerlingguy/sbc-reviews/issues/17
+    year: 2018
+    geekbench_6:
+      single: null
+      multi: null
+    geekbench_5:
+      single: 108
+      multi: 303
+    hpl_gflops: null
+    power_watts:
+      idle: 3.1
+      stress: 5.6
+      geekbench: 5.3
+      hpl: null
+    network_mbps:
+      primary: 253
+      wifi: 24.5
+    gpu:
+      glmark2: null
+      vkmark: null
+      gravitymark: null
+    memory:
+      memcpy: null
+      memset: null
+    phoronix:
+      encode_mp3_sec: null
+      x264_1080p_fps: null
+      x264_4k_fps: null
+      phpbench: null
+      linux_recompile_sec: null
+
+  - name: Raspberry Pi 4 model B
+    arch: aarch64
+    link: https://github.com/geerlingguy/sbc-reviews/issues/4
+    year: 2019
+    geekbench_6:
+      single: 289
+      multi: 653
+    geekbench_5:
+      single: 271
+      multi: 760
+    hpl_gflops: 11.774
+    power_watts:
+      idle: 1.6
+      stress: 5.0
+      geekbench: 5.2
+      hpl: 7.2
+    network_mbps:
+      primary: 939
+      wifi: 108
+    gpu:
+      glmark2: 697
+      vkmark: null
+      gravitymark: null
+    memory_mb_sec:
+      memcpy: 2737.5
+      memset: 3102.7
+    phoronix:
+      encode_mp3_sec: 23.887
+      x264_1080p_fps: 7.61
+      x264_4k_fps: 1.75
+      phpbench: 187221
+      linux_recompile_sec: 5066.188
+
+  - name: Raspberry Pi 400
+    arch: aarch64
+    link: https://github.com/geerlingguy/sbc-reviews/issues/59
+    year: 2020
+    geekbench_6:
+      single: 290
+      multi: 686
+    geekbench_5:
+      single: null
+      multi: null
+    hpl_gflops: 11.077
+    power_watts:
+      idle: 2.7
+      stress: 5.2
+      geekbench: 6.3
+      hpl: 6.4
+    network_mbps:
+      primary: null
+      wifi: null
+    gpu:
+      glmark2: 755
+      vkmark: null
+      gravitymark: null
+    ai_cpu:
+      llama3.2_3b: 1.60
+    memory_mb_sec:
+      memcpy: 2564.8
+      memset: 3066.5
+    phoronix:
+      encode_mp3_sec: 24.500
+      x264_1080p_fps: 7.65
+      x264_4k_fps: 1.70
+      phpbench: 202897
+      linux_recompile_sec: 6849.540
+
+  - name: Raspberry Pi Compute Module 4
+    arch: aarch64
+    link: https://github.com/geerlingguy/sbc-reviews/issues/8
+    year: 2021
+    geekbench_6:
+      single: 256
+      multi: 626
+    geekbench_5:
+      single: null
+      multi: null
+    hpl_gflops: 11.433
+    power_watts:
+      idle: 2.5
+      stress: 4.6
+      geekbench: 4.9
+      hpl: 5.2
+    network_mbps:
+      primary: 938
+      wifi: null
+    gpu:
+      glmark2: 753
+      vkmark: null
+      gravitymark: null
+    ai_cpu:
+      llama3.2_3b: null
+    memory_mb_sec:
+      memcpy: 2831.0
+      memset: 3200.7
+    phoronix:
+      encode_mp3_sec: 29.619
+      x264_1080p_fps: 6.64
+      x264_4k_fps: 1.53
+      phpbench: 166730
+      linux_recompile_sec: 7291.734
+
+  - name: Pine64 SOQuartz
+    arch: aarch64
+    link: https://github.com/geerlingguy/sbc-reviews/issues/7
+    year: 2021
+    geekbench_6:
+      single: 156
+      multi: 336
+    geekbench_5:
+      single: null
+      multi: null
+    hpl_gflops: 11.433
+    power_watts:
+      idle: 1.8
+      stress: 4.4
+      geekbench: 4.6
+      hpl: null
+    network_mbps:
+      primary: 941
+      wifi: null
+    gpu:
+      glmark2: null
+      vkmark: null
+      gravitymark: null
+    ai_cpu:
+      llama3.2_3b: null
+    memory_mb_sec:
+      memcpy: 2974.3
+      memset: 5768.3
+    phoronix:
+      encode_mp3_sec: null
+      x264_1080p_fps: null
+      x264_4k_fps: null
+      phpbench: null
+      linux_recompile_sec: null
+
+  - name: Radxa Rock 3 Compute Module (CM3)
+    arch: aarch64
+    link: https://github.com/geerlingguy/sbc-reviews/issues/15
+    year: 2021
+    geekbench_6:
+      single: null
+      multi: null
+    geekbench_5:
+      single: null
+      multi: null
+    hpl_gflops: null
+    power_watts:
+      idle: null
+      stress: null
+      geekbench: null
+      hpl: null
+    network_mbps:
+      primary: null
+      wifi: null
+    gpu:
+      glmark2: null
+      vkmark: null
+      gravitymark: null
+    ai_cpu:
+      llama3.2_3b: null
+    memory_mb_sec:
+      memcpy: null
+      memset: null
+    phoronix:
+      encode_mp3_sec: null
+      x264_1080p_fps: null
+      x264_4k_fps: null
+      phpbench: null
+      linux_recompile_sec: null
+
+  - name: BigTreeTech CB1
+    arch: aarch64
+    link: https://github.com/geerlingguy/sbc-reviews/issues/28
+    year: 2022
+    geekbench_6:
+      single: null
+      multi: null
+    geekbench_5:
+      single: null
+      multi: null
+    hpl_gflops: null
+    power_watts:
+      idle: null
+      stress: null
+      geekbench: null
+      hpl: null
+    network_mbps:
+      primary: 94.6
+      wifi: null
+    gpu:
+      glmark2: null
+      vkmark: null
+      gravitymark: null
+    ai_cpu:
+      llama3.2_3b: null
+    memory_mb_sec:
+      memcpy: null
+      memset: null
+    phoronix:
+      encode_mp3_sec: null
+      x264_1080p_fps: null
+      x264_4k_fps: null
+      phpbench: null
+      linux_recompile_sec: null
+
+  - name: StarFive VisionFive 2
+    arch: riscv64
+    link: https://github.com/geerlingguy/sbc-reviews/issues/10
+    year: 2022
+    geekbench_6:
+      single: 74
+      multi: 218
+    geekbench_5:
+      single: 78
+      multi: 276
+    hpl_gflops: null
+    power_watts:
+      idle: 3.1
+      stress: 5.3
+      geekbench: 5.2
+      hpl: null
+    network_mbps:
+      primary: 937
+      wifi: null
+    gpu:
+      glmark2: null
+      vkmark: null
+      gravitymark: null
+    ai_cpu:
+      llama3.2_3b: null
+    memory_mb_sec:
+      memcpy: null
+      memset: null
+    phoronix:
+      encode_mp3_sec: null
+      x264_1080p_fps: null
+      x264_4k_fps: null
+      phpbench: null
+      linux_recompile_sec: null
+
+  - name: Banana Pi BPI-CM4
+    arch: aarch64
+    link: https://github.com/geerlingguy/sbc-reviews/issues/11
+    year: 2022
+    geekbench_6:
+      single: null
+      multi: null
+    geekbench_5:
+      single: 281
+      multi: 1036
+    hpl_gflops: null
+    power_watts:
+      idle: 1.8
+      stress: 4.1
+      geekbench: 4.0
+      hpl: null
+    network_mbps:
+      primary: 943
+      wifi: 25.5
+    gpu:
+      glmark2: null
+      vkmark: null
+      gravitymark: null
+    ai_cpu:
+      llama3.2_3b: null
+    memory_mb_sec:
+      memcpy: null
+      memset: null
+    phoronix:
+      encode_mp3_sec: null
+      x264_1080p_fps: null
+      x264_4k_fps: null
+      phpbench: null
+      linux_recompile_sec: null
+
+  - name: Orange Pi 5
+    arch: aarch64
+    link: https://github.com/geerlingguy/sbc-reviews/issues/5
+    year: 2023
+    geekbench_6:
+      single: 805
+      multi: 3070
+    geekbench_5:
+      single: 656
+      multi: 2614
+    hpl_gflops: 53.33
+    power_watts:
+      idle: 1.0
+      stress: 10.0
+      geekbench: 8.9
+      hpl: 11.5
+    network_mbps:
+      primary: 942
+      wifi: null
+    gpu:
+      glmark2: null
+      vkmark: null
+      gravitymark: null
+    ai_cpu:
+      llama3.2_3b: null
+    memory_mb_sec:
+      memcpy: 12420.1
+      memset: 29405.7
+    phoronix:
+      encode_mp3_sec: 12.269
+      x264_1080p_fps: 22.69
+      x264_4k_fps: 3.52
+      phpbench: 420027
+      linux_recompile_sec: 1321.267
+
+  - name: Radxa Rock 5 model B
+    arch: aarch64
+    link: https://github.com/geerlingguy/sbc-reviews/issues/3
+    year: 2023
+    geekbench_6:
+      single: 748
+      multi: 2941
+    geekbench_5:
+      single: 565
+      multi: 2384
+    hpl_gflops: 51.382
+    power_watts:
+      idle: 3.6
+      stress: 17
+      geekbench: 14
+      hpl: 12
+    network_mbps:
+      primary: 2350
+      wifi: null
+    gpu:
+      glmark2: null
+      vkmark: null
+      gravitymark: null
+    ai_cpu:
+      llama3.2_3b: null
+    memory_mb_sec:
+      memcpy: 9964.5
+      memset: 28159.3
+    phoronix:
+      encode_mp3_sec: 12.495
+      x264_1080p_fps: 22.32
+      x264_4k_fps: 4.28
+      phpbench: 372255
+      linux_recompile_sec: 1154.358
+
+  - name: Ampere Altra Developer Platform
+    arch: aarch64
+    link: https://github.com/geerlingguy/sbc-reviews/issues/19
+    year: 2023
+    geekbench_6:
+      single: null
+      multi: null
+    geekbench_5:
+      single: 800
+      multi: 35818
+    hpl_gflops: 1188.3
+    power_watts:
+      idle: 85
+      stress: 242
+      geekbench: 178
+      hpl: 296
+    network_mbps:
+      primary: null
+      wifi: null
+    gpu:
+      glmark2: null
+      vkmark: null
+      gravitymark: null
+    ai_cpu:
+      llama3.2_3b: null
+    memory_mb_sec:
+      memcpy: 9894.0
+      memset: 44745.2
+    phoronix:
+      encode_mp3_sec: null
+      x264_1080p_fps: null
+      x264_4k_fps: null
+      phpbench: 498149
+      linux_recompile_sec: 116.59
+
+  - name: Raspberry Pi 5 model B
+    arch: aarch64
+    link: https://github.com/geerlingguy/sbc-reviews/issues/21
+    year: 2023
+    geekbench_6:
+      single: 904
+      multi: 2164
+    geekbench_5:
+      single: null
+      multi: null
+    hpl_gflops: 35.169
+    power_watts:
+      idle: 2.8
+      stress: 9.7
+      geekbench: 7.9
+      hpl: 11
+    network_mbps:
+      primary: 938
+      wifi: 186
+    gpu:
+      glmark2: 1935
+      vkmark: null
+      gravitymark: null
+    ai_cpu:
+      llama3.2_3b: null
+    memory_mb_sec:
+      memcpy: 4805.4
+      memset: 13676.9
+    phoronix:
+      encode_mp3_sec: 11.824
+      x264_1080p_fps: 18.00
+      x264_4k_fps: 4.20
+      phpbench: 437085
+      linux_recompile_sec: 2282.952
+
+  # TODO: Add full detail
+  - name: Milk-V Mars CM
+    arch: aarch64
+    link: https://github.com/geerlingguy/sbc-reviews/issues/22
+    year: 2023
+
+  # TODO: Add full detail
+  - name: Orange Pi Compute Module 4
+    arch: aarch64
+    link: https://github.com/geerlingguy/sbc-reviews/issues/26
+    year: 2023
+
+  # TODO: Add full detail
+  - name: Luckfox Core3566
+    arch: aarch64
+    link: https://github.com/geerlingguy/sbc-reviews/issues/27
+    year: 2023
+
+  # TODO: Add full detail
+  - name: Sipeed LonganPi 3H / LM3H
+    arch: aarch64
+    link: https://github.com/geerlingguy/sbc-reviews/issues/79
+    year: 2023
+
+  # TODO: Add full detail
+  - name: Orange Pi Zero 2W
+    arch: aarch64
+    link: https://github.com/geerlingguy/sbc-reviews/issues/33
+    year: 2023
+
+  # TODO: Add 2024, 2025...

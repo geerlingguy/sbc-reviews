@@ -1,0 +1,6 @@
+{{ with .Params.custom_css }}
+  {{ $style := resources.Get . | minify | fingerprint }}
+  <link rel="stylesheet" href="{{ $style.RelPermalink }}">
+{{ end }}
+{{ $sortable := resources.Get "js/sorttable.js" | fingerprint }}
+<script src="{{ $sortable.RelPermalink }}"></script>
