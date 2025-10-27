@@ -169,7 +169,7 @@ sudo /bin/bash ./sbc-bench.sh -r
 Results from [pi-general-benchmark.sh](https://gist.github.com/geerlingguy/570e13f4f81a40a5395688667b1f79af):
 
   - pts/encode-mp3: TODO sec
-  - pts/x264 4K: TODO fps
   - pts/x264 1080p: TODO fps
+  - pts/x264 4K: TODO fps
   - pts/phpbench: TODO
   - pts/build-linux-kernel (defconfig): TODO sec
