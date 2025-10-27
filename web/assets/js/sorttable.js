@@ -151,6 +151,8 @@ sorttable = {
 	        //sorttable.shaker_sort(row_array, this.sorttable_sortfunction);
 	        /* and comment out this one */
 	        row_array.sort(this.sorttable_sortfunction);
+          /* Sort in descending order first */
+          row_array.reverse();
 
 	        tb = this.sorttable_tbody;
 	        for (var j=0; j<row_array.length; j++) {
