@@ -8,6 +8,39 @@ th,td {
   text-align: left;
 }
 
-div {
-  display: inline-block;
+/* Create sticky table headers */
+.table-container {
+  overflow: auto;
+  height: 400px;
+}
+
+.table-container .sticky-table th,
+.table-container .sticky-table td {
+  padding: 0.2rem 0.5rem;
+}
+
+table.sticky-table {
+  overflow: visible;
+  border-collapse: collapse;
+  border-spacing: 0;
+  table-layout: fixed;
+}
+
+.sticky-table th:nth-child(1),
+.sticky-table td:nth-child(1) {
+  position: sticky;
+  left: 0;
+  background-color: #111;
+  z-index: 1;
+}
+
+.sticky-table th:nth-child(1) {
+  z-index: 2;
+}
+
+.sticky-table th {
+  position: sticky;
+  top: 0;
+  background-color: #111;
+  z-index: 1;
 }

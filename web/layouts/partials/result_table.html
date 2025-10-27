@@ -1,59 +1,65 @@
 
-<table class="sortable results-table" id="benchmark-results-table">
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Year</th>
-      <th>Arch</th>
-      <th>gb6 single</th>
-      <th>gb6 multi</th>
-      <th>HPL Gflops</th>
-      <th>Power (Idle)</th>
-      <th>Power (stress)</th>
-      <th>Power (HPL)</th>
-      <th>Efficiency (HPL)</th>
-      <th>Network (Mbps)</th>
-      <th>WiFi (Mbps)</th>
-      <th>GLMark2</th>
-      <th>vkmark</th>
-      <th>memcpy (MB/s)</th>
-      <th>memset (MB/s)</th>
-      <th>Encode MP3 (sec)</th>
-      <th>x264 (1080p) (fps)</th>
-      <th>x264 (4K) (fps)</th>
-      <th>PHPBench</th>
-      <th>Linux compile (sec)</th>
-    </tr>
-  </thead>
-  <tbody>
-    {{ range .Site.Data.results.items }}
-    <tr>
-      <td><a href="{{ .link }}">{{ .name }}</a></td>
-      <td>{{ .year }}</td>
-      <td>{{ .arch }}</td>
-      <td>{{ .geekbench_6.single }}</td>
-      <td>{{ .geekbench_6.multi }}</td>
-      <td>{{ .hpl_gflops }}</td>
-      <td>{{ .power_watts.idle }}</td>
-      <td>{{ .power_watts.stress }}</td>
-      <td>{{ .power_watts.hpl }}</td>
-      {{ if and .power_watts.hpl (ne .power_watts.hpl 0) }}
-        <td>{{ printf "%.2f" (div (float .hpl_gflops) (float .power_watts.hpl)) }}</td>
-      {{ else }}
-        <td></td>
+<div class="table-container">
+  <table class="sortable results-table sticky-table" id="benchmark-results-table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Year</th>
+        <th>Price</th>
+        <th>Arch</th>
+        <th>gb6 single</th>
+        <th>gb6 multi</th>
+        <th>HPL Gflops</th>
+        <th>HPL Efficiency</th>
+        <th>Power (Idle)</th>
+        <th>Power (stress)</th>
+        <th>Network (Mbps)</th>
+        <th>WiFi (Mbps)</th>
+        <th>GLMark2</th>
+        <th>vkmark</th>
+        <th>memcpy (MB/s)</th>
+        <th>memset (MB/s)</th>
+        <th>Encode MP3 (sec)</th>
+        <th>x264 (1080p) (fps)</th>
+        <th>x264 (4K) (fps)</th>
+        <th>PHPBench</th>
+        <th>Linux compile (sec)</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{ range .Site.Data.results.items }}
+      <tr>
+        <td><a href="{{ .link }}">{{ .name }}</a></td>
+        <td>{{ .year }}</td>
+        {{ if .price_as_tested }}
+          <td>{{ .price_as_tested | lang.FormatCurrency 2 "USD" }}</td>
+        {{ else }}
+          <td></td>
+        {{ end }}
+        <td>{{ .arch }}</td>
+        <td>{{ .geekbench_6.single }}</td>
+        <td>{{ .geekbench_6.multi }}</td>
+        <td>{{ .hpl_gflops }}</td>
+        {{ if and .power_watts.hpl (ne .power_watts.hpl 0) }}
+          <td>{{ (div (float .hpl_gflops) (float .power_watts.hpl)) | printf "%.2f" }}</td>
+        {{ else }}
+          <td></td>
+        {{ end }}
+        <td>{{ .power_watts.idle }}</td>
+        <td>{{ .power_watts.stress }}</td>
+        <td>{{ .network_mbps.primary }}</td>
+        <td>{{ .network_mbps.wifi }}</td>
+        <td>{{ .gpu.glmark2 }}</td>
+        <td>{{ .gpu.vkmark }}</td>
+        <td>{{ .memory_mb_sec.memcpy }}</td>
+        <td>{{ .memory_mb_sec.memset }}</td>
+        <td>{{ .phoronix.encode_mp3_sec }}</td>
+        <td>{{ .phoronix.x264_1080p_fps }}</td>
+        <td>{{ .phoronix.x264_4k_fps }}</td>
+        <td>{{ .phoronix.phpbench }}</td>
+        <td>{{ .phoronix.linux_recompile_sec }}</td>
+      </tr>
       {{ end }}
-      <td>{{ .network_mbps.primary }}</td>
-      <td>{{ .network_mbps.wifi }}</td>
-      <td>{{ .gpu.glmark2 }}</td>
-      <td>{{ .gpu.vkmark }}</td>
-      <td>{{ .memory.memcpy }}</td>
-      <td>{{ .memory.memset }}</td>
-      <td>{{ .phoronix.encode_mp3_sec }}</td>
-      <td>{{ .phoronix.x264_1080p_fps }}</td>
-      <td>{{ .phoronix.x264_4k_fps }}</td>
-      <td>{{ .phoronix.phpbench }}</td>
-      <td>{{ .phoronix.linux_recompile_sec }}</td>
-    </tr>
-    {{ end }}
-  </tbody>
-</table>
+    </tbody>
+  </table>
+</div>
