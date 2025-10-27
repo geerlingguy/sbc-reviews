@@ -1,4 +1,4 @@
 hosts = (
-    ["10.0.2.223"],
-    {"ssh_user": "arduino"},
+    ["pi500plus.local"],
+    {"ssh_user": "pi"},
 )
