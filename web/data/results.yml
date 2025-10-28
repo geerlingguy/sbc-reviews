@@ -42,20 +42,20 @@ items:
   price_as_tested: 44.00
   year: 2025
   geekbench_6:
-    single: null
-    multi: null
+    single: 187
+    multi: 530
   geekbench_5:
     single: null
     multi: null
-  hpl_gflops: 8.21
+  hpl_gflops: 9.597
   power_watts:
-    idle: 2.9
-    stress: 4.3
-    geekbench: null
-    hpl: 5.7
+    idle: 0.5
+    stress: 1.9
+    geekbench: 2.5
+    hpl: 3.5
   network_mbps:
     primary: null
-    wifi: null
+    wifi: 277
   gpu:
     glmark2: 290
     vkmark: 741
