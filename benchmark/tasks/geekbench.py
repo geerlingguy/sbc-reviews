@@ -8,11 +8,11 @@ working_dir=host.get_fact(Home) + "/Downloads"
 host_arch = host.get_fact(Arch)
 match host_arch:
     case 'x86_64':
-        download_file="Geekbench-6.4.0-Linux.tar.gz"
+        download_file="Geekbench-6.5.0-Linux.tar.gz"
     case 'aarch64':
-        download_file="Geekbench-6.4.0-LinuxARMPreview.tar.gz"
+        download_file="Geekbench-6.5.0-LinuxARMPreview.tar.gz"
     case 'riscv64':
-        download_file="Geekbench-6.4.0-LinuxRISCVPreview.tar.gz"
+        download_file="Geekbench-6.5.0-LinuxRISCVPreview.tar.gz"
     case _:
         python.raise_exception(
             name="Raise host not supported exception",

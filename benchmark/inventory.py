@@ -1,4 +1,4 @@
 hosts = (
-    ["pi500plus.local"],
+    ["pi3bplus.local"],
     {"ssh_user": "pi"},
 )
