@@ -127,8 +127,8 @@ ollama pull llama3.2:3b \
   && ollama pull llama2:13b
 
 # Download the benchmarking script
-git clone https://github.com/geerlingguy/ollama-benchmark.git
-cd ollama-benchmark
+git clone https://github.com/geerlingguy/ai-benchmarks.git
+cd ai-benchmarks
 
 # Run benchmark on multiple models
 declare -a models=("llama3.2:3b" "llama3.1:8b" "llama2:13b")
