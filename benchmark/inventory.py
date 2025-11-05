@@ -1,4 +1,4 @@
 hosts = (
-    ["pi3bplus.local"],
-    {"ssh_user": "pi"},
+    ["optiplex-780.local"],
+    {"ssh_user": "jgeerling"},
 )

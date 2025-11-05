@@ -1433,3 +1433,39 @@ items:
     x264_4k_fps: null
     phpbench: null
     linux_recompile_sec: null
+
+- name: Dell Optiplex 780
+  arch: x86_64
+  link: https://github.com/geerlingguy/sbc-reviews/issues/88
+  price_as_tested: 60.00
+  year: 2009
+  geekbench_6:
+    single: 360
+    multi: 1045
+  geekbench_5:
+    single: null
+    multi: null
+  hpl_gflops: 31.224
+  power_watts:
+    idle: 66
+    stress: 139.9
+    geekbench: 99.9
+    hpl: 180
+  network_mbps:
+    primary: 938
+    wifi: null
+  gpu:
+    glmark2: 1298
+    vkmark: 85
+    gravitymark: null
+  ai_cpu:
+    llama3.2_3b: 1.09
+  memory:
+    memcpy: 3352.9
+    memset: 2355.1
+  phoronix:
+    encode_mp3_sec: 19.650
+    x264_1080p_fps: 14.36
+    x264_4k_fps: 3.38
+    phpbench: 287754
+    linux_recompile_sec: 1016.956

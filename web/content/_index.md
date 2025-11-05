@@ -51,8 +51,9 @@ For now, this manually-curated list just links back to GitHub Issues, one for ea
 | [Raspberry Pi Compute Module 4](https://github.com/geerlingguy/sbc-reviews/issues/8) | 2020 | Broadcom BCM2711 |
 | [Raspberry Pi 400](https://github.com/geerlingguy/sbc-reviews/issues/59) | 2020 | Broadcom BCM2711 |
 | [Raspberry Pi 4 model B](https://github.com/geerlingguy/sbc-reviews/issues/4) | 2019 | Broadcom BCM2711 |
-| [Raspberry Pi 3 model B+](https://github.com/geerlingguy/sbc-reviews/issues/16) | 2018 | Boardcom BCM2837B0 |
+| [Raspberry Pi 3 model B+](https://github.com/geerlingguy/sbc-reviews/issues/16) | 2018 | Broadcom BCM2837B0 |
 | [Libre Computer 'Le Potato'](https://github.com/geerlingguy/sbc-reviews/issues/17) | 2017 | Amlogic S905X |
+| [Dell Optiplex 780](https://github.com/geerlingguy/sbc-reviews/issues/88) | 2009 | Intel C2Q Q8400 |
 
 ## About
 
