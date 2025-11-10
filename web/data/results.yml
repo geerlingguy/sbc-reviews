@@ -1,5 +1,41 @@
 items:
 
+- name: Minisforum MS-R1
+  arch: aarch64
+  link: https://github.com/geerlingguy/sbc-reviews/issues/89
+  price_as_tested: 695.90
+  year: 2025
+  geekbench_6:
+    single: null
+    multi: null
+  geekbench_5:
+    single: null
+    multi: null
+  hpl_gflops: null
+  power_watts:
+    idle: null
+    stress: null
+    geekbench: null
+    hpl: null
+  network_mbps:
+    primary: null
+    wifi: null
+  gpu:
+    glmark2: null
+    vkmark: null
+    gravitymark: null
+  ai_cpu:
+    llama3.2_3b: null
+  memory_mb_sec:
+    memcpy: null
+    memset: null
+  phoronix:
+    encode_mp3_sec: null
+    x264_1080p_fps: null
+    x264_4k_fps: null
+    phpbench: null
+    linux_recompile_sec: null
+
 - name: Radxa Dragon Q6A
   arch: aarch64
   link: https://github.com/geerlingguy/sbc-reviews/issues/85

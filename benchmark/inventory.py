@@ -1,4 +1,4 @@
 hosts = (
-    ["optiplex-780.local"],
-    {"ssh_user": "jgeerling"},
+    ["10.0.2.217"],
+    {"ssh_user": "mini"},
 )
