@@ -6,35 +6,35 @@ items:
   price_as_tested: 695.90
   year: 2025
   geekbench_6:
-    single: null
-    multi: null
+    single: 1336
+    multi: 6773
   geekbench_5:
     single: null
     multi: null
-  hpl_gflops: null
+  hpl_gflops: 45.546
   power_watts:
-    idle: null
-    stress: null
-    geekbench: null
-    hpl: null
+    idle: 17
+    stress: 30.3
+    geekbench: 34.7
+    hpl: 42
   network_mbps:
-    primary: null
-    wifi: null
+    primary: 9400
+    wifi: 925
   gpu:
-    glmark2: null
+    glmark2: 6322
     vkmark: null
-    gravitymark: null
+    gravitymark: 3037
   ai_cpu:
-    llama3.2_3b: null
+    llama3.2_3b: 12.12
   memory_mb_sec:
-    memcpy: null
-    memset: null
+    memcpy: 16556.4
+    memset: 41295.1
   phoronix:
-    encode_mp3_sec: null
-    x264_1080p_fps: null
-    x264_4k_fps: null
-    phpbench: null
-    linux_recompile_sec: null
+    encode_mp3_sec: 8.762
+    x264_1080p_fps: 53.43
+    x264_4k_fps: 12.93
+    phpbench: 649067
+    linux_recompile_sec: 896.561
 
 - name: Radxa Dragon Q6A
   arch: aarch64
@@ -227,12 +227,12 @@ items:
   geekbench_5:
     single: null
     multi: null
-  hpl_gflops: 20.161
+  hpl_gflops: 36.014
   power_watts:
     idle: 14.2
     stress: 24.9
     geekbench: 27.3
-    hpl: 26.4
+    hpl: 35.7
   network_mbps:
     primary: null
     wifi: null
