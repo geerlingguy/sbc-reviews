@@ -983,12 +983,12 @@ items:
   geekbench_5:
     single: null
     multi: null
-  hpl_gflops: 35.169
+  hpl_gflops: 37.888
   power_watts:
     idle: 2.8
     stress: 9.7
     geekbench: 7.9
-    hpl: 11
+    hpl: 13.8
   network_mbps:
     primary: 938
     wifi: 186
