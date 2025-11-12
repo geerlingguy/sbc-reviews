@@ -13,7 +13,7 @@ tasks = [
     'disk-benchmark.py',
     'top500.py',
     'sbc-general-benchmark.py',
-    'ollama-benchmark.py',
+    'ai-benchmark.py',
 ]
 
 local.include("tasks/setup.py")

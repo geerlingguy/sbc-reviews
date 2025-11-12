@@ -33,9 +33,9 @@ if not host_arch == 'riscv64':
         )
 
 git.repo(
-    name="Clone ollama-benchmark with git.",
-    src="https://github.com/geerlingguy/ollama-benchmark.git",
-    dest="{}/ollama-benchmark".format(working_dir),
+    name="Clone ai-benchmarks with git.",
+    src="https://github.com/geerlingguy/ai-benchmarks.git",
+    dest="{}/ai-benchmarks".format(working_dir),
 )
 
 def ollama_loop_callback():
@@ -52,7 +52,7 @@ def ollama_loop_callback():
 
         ollama_benchmark_result = server.shell(
             name="Benchmark Ollama model: {}".format(model),
-            commands="{}/ollama-benchmark/obench.sh -m {} -c 3 --markdown".format(working_dir, model),
+            commands="{}/ai-benchmarks/obench.sh -m {} -c 3 --markdown".format(working_dir, model),
         )
 
         logger.info(f"\n{ollama_benchmark_result.stdout}\n\n")
