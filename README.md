@@ -2,15 +2,9 @@
 
 Jeff Geerling's SBC (Single-Board Computer) review and benchmarking data repo.
 
-There are many like it, but this one is mine.
-
 ## Website
 
-TODO: I am working on moving the data within this repository into a static website for easier browsing and so I can more easily link to the information. This process will take some time. Visit the site at [https://sbc-reviews.jeffgeerling.com/](https://sbc-reviews.jeffgeerling.com/).
-
-## List of SBCs
-
-The list of SBCs has been moved to the [SBC Reviews website](https://sbc-reviews.jeffgeerling.com).
+For a list of all the reviews, and all my test data, visit the site at [https://sbc-reviews.jeffgeerling.com/](https://sbc-reviews.jeffgeerling.com/).
 
 ## Motivation
 
@@ -61,10 +55,6 @@ The website is generated with Hugo. Check out [Hugo's installation guide](https:
 Change directories into `web` and run `hugo server` to run to run a local development environment and preview the site.
 
 The website is built using GitHub Actions, with the configuration stored inside `.github/workflows/hugo.yml`.
-
-## SBC Awards
-
-I'm considering crowning certain SBCs with awards every year, like "Fastest storage" or "least functionality." That seems like it could be a fun way to blow off steam when I'm having a terrible experience, or celebrate some truly groundbreaking new features...
 
 ## Author
 

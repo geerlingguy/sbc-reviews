@@ -23,6 +23,7 @@ For now, this manually-curated list just links back to GitHub Issues, one for ea
 | [HiFive Premier P550](https://github.com/geerlingguy/sbc-reviews/issues/65) | 2025 | ESWIN EIC7700X |
 | [GMKtec NucBox G3 Plus](https://github.com/geerlingguy/sbc-reviews/issues/64) | 2025 | Intel N150 |
 | [Apple Mac Mini M4](https://github.com/geerlingguy/sbc-reviews/issues/57) | 2024 | Apple M4 |
+| [System76 Thelio Astra](https://github.com/geerlingguy/sbc-reviews/issues/53) | 2024 | Ampere Altra Max M128-30 |
 | [Raspberry Pi 500](https://github.com/geerlingguy/sbc-reviews/issues/60) | 2024 | Broadcom BCM2712 |
 | [Raspberry Pi CM5](https://github.com/geerlingguy/sbc-reviews/issues/58) | 2024 | Broadcom BCM2712 |
 | [Snapdragon Dev Kit](https://github.com/geerlingguy/sbc-reviews/issues/51) | 2024 | Snapdragon X Elite |

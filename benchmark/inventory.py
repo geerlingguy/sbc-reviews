@@ -1,4 +1,4 @@
 hosts = (
-    ["10.0.2.217"],
-    {"ssh_user": "mini"},
+    ["framework-13.local"],
+    {"ssh_user": "jgeerling"},
 )
