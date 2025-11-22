@@ -2,7 +2,7 @@ from pyinfra import host, logger
 from pyinfra.operations import files, python, server
 from pyinfra.facts.server import Home
 
-php_version="8.4"  # TODO Maybe map 8.x for different Ubuntu / Debian versions.
+php_version=host.data.php_version # TODO Map 8.x for different deb versions.
 working_dir=host.get_fact(Home) + "/Downloads"
 
 files.download(

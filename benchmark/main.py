@@ -8,11 +8,11 @@ assert sys.version_info >= (3, 10)
 
 pause_seconds = 60
 tasks = [
-    'tinymembench.py',
-    'geekbench.py',
-    'disk-benchmark.py',
-    'top500.py',
-    'sbc-general-benchmark.py',
+    #'tinymembench.py',
+    #'geekbench.py',
+    #'disk-benchmark.py',
+    #'top500.py',
+    #'sbc-general-benchmark.py',
     'ai-benchmark.py',
 ]
 

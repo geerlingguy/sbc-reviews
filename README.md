@@ -30,7 +30,7 @@ I often test a variety of other board-specific features, too, though it depends 
 
 The benchmark scripts are run using `pyinfra`. It can be installed with `pip3 install pyinfra`.
 
-Inside the `benchmark` directory, modify `inventory.py` to point at the system under test, and run:
+Inside the `benchmark` directory, modify `inventory.py` to point at the system under test, modify `group_data/all.py` with the variables appropriate for your system, and run:
 
 ```
 pyinfra inventory.py main.py -y

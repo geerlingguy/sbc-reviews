@@ -7,8 +7,8 @@ linux_name=host.get_fact(LinuxName)
 
 # TODO: Make this dynamic based on CPU core count?
 # See: https://gist.github.com/CJCShadowsan/94efdf21539f3156414c1224b1c76605
-hpl_ps=1
-hpl_qs=6
+hpl_ps=host.data.hpl_ps
+hpl_qs=host.data.hpl_qs
 
 git.repo(
     name="Clone top500 with git.",
