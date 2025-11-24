@@ -25,17 +25,17 @@ llama_cpp_models = {
     'urls': ['https://huggingface.co/TheBloke/TinyLlama-1.1B-1T-OpenOrca-GGUF/resolve/main/tinyllama-1.1b-1t-openorca.Q4_K_M.gguf'],
     'size_in_gb': 0.7,
   },
-  'Llama-3.2-3B-Instruct-Q4_K_M.gguf': {
-    'urls': ['https://huggingface.co/bartowski/Llama-3.2-3B-Instruct-GGUF/resolve/main/Llama-3.2-3B-Instruct-Q4_K_M.gguf'],
-    'size_in_gb': 1.9,
-  },
+  # 'Llama-3.2-3B-Instruct-Q4_K_M.gguf': {
+  #   'urls': ['https://huggingface.co/bartowski/Llama-3.2-3B-Instruct-GGUF/resolve/main/Llama-3.2-3B-Instruct-Q4_K_M.gguf'],
+  #   'size_in_gb': 1.9,
+  # },
   # 'llama-2-13b.Q4_K_M.gguf': {
   #   'urls': ['https://huggingface.co/TheBloke/Llama-2-13B-GGUF/resolve/main/llama-2-13b.Q4_K_M.gguf'],
-  #   'size_in_gb': 7.87,
+  #   'size_in_gb': 7.4,
   # },
   # 'DeepSeek-R1-Distill-Qwen-14B-Q4_K_M.gguf': {
   #   'urls': ['https://huggingface.co/unsloth/DeepSeek-R1-Distill-Qwen-14B-GGUF/resolve/main/DeepSeek-R1-Distill-Qwen-14B-Q4_K_M.gguf'],
-  #   'size_in_gb': 9.0,
+  #   'size_in_gb': 8.4,
   # },
   # 'gpt-oss-20b-Q4_K_M.gguf': {
   #   'urls': ['https://huggingface.co/unsloth/gpt-oss-20b-GGUF/resolve/main/gpt-oss-20b-Q4_K_M.gguf'],
@@ -43,7 +43,7 @@ llama_cpp_models = {
   # },
   # 'Qwen3-30B-A3B-Q4_K_M.gguf': {
   #   'urls': ['https://huggingface.co/bartowski/Qwen_Qwen3-32B-GGUF/resolve/main/Qwen_Qwen3-32B-Q4_K_M.gguf'],
-  #   'size_in_gb': 18.6,
+  #   'size_in_gb': 19,
   # },
   # 'Meta-Llama-3.1-70B-Instruct-Q4_K_M.gguf': {
   #   'urls': ['https://huggingface.co/bartowski/Meta-Llama-3.1-70B-Instruct-GGUF/resolve/main/Meta-Llama-3.1-70B-Instruct-Q4_K_M.gguf'],
