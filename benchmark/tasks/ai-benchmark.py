@@ -2,7 +2,7 @@ import os
 from pyinfra import host, logger
 from pyinfra.facts.files import File
 from pyinfra.facts.hardware import Memory
-from pyinfra.facts.server import Arch, Home, LinuxName
+from pyinfra.facts.server import Arch, Command, Home, LinuxName
 from pyinfra.operations import apt, dnf, files, git, python, server
 from urllib.parse import urlparse
 
@@ -45,11 +45,12 @@ if host.data.ai_benchmark == 'llama.cpp':
     )
 
     llama_cpp_build_opts=host.data.llama_cpp_build_opts
+    num_cores = host.get_fact(Command, command="cat /proc/cpuinfo | grep -m 1 \"cpu cores\" | awk '{print $NF}'")
     server.shell(
         name="Build llama.cpp",
         commands=[
             "cd {}/llama.cpp && cmake -B build {}".format(working_dir, llama_cpp_build_opts),
-            "cd {}/llama.cpp && cmake --build build --config Release".format(working_dir)
+            "cd {}/llama.cpp && cmake --build build --config Release -j {}".format(working_dir, num_cores)
         ]
     )
 

@@ -1,4 +1,4 @@
 hosts = (
-    ["cm5.local"],
-    {"ssh_user": "pi"},
+    ["asus-proart.local"],
+    {"ssh_user": "jgeerlingg"},
 )
