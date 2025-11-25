@@ -5,7 +5,7 @@ hpl_ps = 1
 hpl_qs = 4
 
 # PHP version available in system package manager (used for PTS installation).
-php_version = "8.3"
+php_version = "8.4"
 
 # Select from 'llama.cpp' or 'ollama'.
 ai_benchmark = 'llama.cpp'
@@ -41,9 +41,9 @@ llama_cpp_models = {
   #   'urls': ['https://huggingface.co/unsloth/gpt-oss-20b-GGUF/resolve/main/gpt-oss-20b-Q4_K_M.gguf'],
   #   'size_in_gb': 11.6,
   # },
-  # 'Qwen3-30B-A3B-Q4_K_M.gguf': {
-  #   'urls': ['https://huggingface.co/bartowski/Qwen_Qwen3-32B-GGUF/resolve/main/Qwen_Qwen3-32B-Q4_K_M.gguf'],
-  #   'size_in_gb': 19,
+  # 'Qwen_Qwen3-30B-A3B-Q4_K_M.gguf': {
+  #   'urls': ['https://huggingface.co/bartowski/Qwen_Qwen3-30B-A3B-GGUF/resolve/main/Qwen_Qwen3-30B-A3B-Q4_K_M.gguf'],
+  #   'size_in_gb': 18.6,
   # },
   # 'Meta-Llama-3.1-70B-Instruct-Q4_K_M.gguf': {
   #   'urls': ['https://huggingface.co/bartowski/Meta-Llama-3.1-70B-Instruct-GGUF/resolve/main/Meta-Llama-3.1-70B-Instruct-Q4_K_M.gguf'],

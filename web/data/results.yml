@@ -1,5 +1,41 @@
 items:
 
+- name: Dell Pro Max with GB10
+  arch: aarch64
+  link: https://github.com/geerlingguy/sbc-reviews/issues/92
+  price_as_tested: 3998.99
+  year: 2025
+  geekbench_6:
+    single: 3123
+    multi: 19708
+  geekbench_5:
+    single: null
+    multi: null
+  hpl_gflops: 675.39
+  power_watts:
+    idle: 31.5
+    stress: 127.1
+    geekbench: 114.8
+    hpl: 155
+  network_mbps:
+    primary: null
+    wifi: 672
+  gpu:
+    glmark2: null
+    vkmark: null
+    gravitymark: null
+  ai_cpu:
+    llama3.2_3b: 97.93
+  memory_mb_sec:
+    memcpy: 31937.3
+    memset: 86858.0
+  phoronix:
+    encode_mp3_sec: 4.037
+    x264_1080p_fps: 203.94
+    x264_4k_fps: 52.84
+    phpbench: 1300604
+    linux_recompile_sec: 188.667
+
 - name: Minisforum MS-R1
   arch: aarch64
   link: https://github.com/geerlingguy/sbc-reviews/issues/89
@@ -323,6 +359,42 @@ items:
     x264_4k_fps: 7.05
     phpbench: 755754
     linux_recompile_sec: 500.745
+
+- name: Intel Core Ultra 7 265K
+  arch: x86_64
+  link: https://github.com/geerlingguy/sbc-reviews/issues/93
+  price_as_tested: 2997.58
+  year: 2024
+  geekbench_6:
+    single: 3340
+    multi: 21726
+  geekbench_5:
+    single: null
+    multi: null
+  hpl_gflops: 741.10
+  power_watts:
+    idle: 34.5
+    stress: 244.5
+    geekbench: 201.6
+    hpl: 273
+  network_mbps:
+    primary: 2.36
+    wifi: null
+  gpu:
+    glmark2: null
+    vkmark: null
+    gravitymark: null
+  ai_cpu:
+    llama3.2_3b: null
+  memory_mb_sec:
+    memcpy: 37140.8
+    memset: 80744.9
+  phoronix:
+    encode_mp3_sec: 4.234
+    x264_1080p_fps: 273.47
+    x264_4k_fps: 66.27
+    phpbench: 1738528
+    linux_recompile_sec: 54.468
 
 - name: Apple Mac mini M4
   arch: aarch64

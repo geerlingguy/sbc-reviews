@@ -64,8 +64,6 @@ sudo MOUNT_PATH=/ TEST_SIZE=1g ./disk-benchmark.sh
 
 Run benchmark on any attached storage device (e.g. eMMC, microSD, NVMe, SATA) and add results under an additional heading.
 
-Also consider running [PiBenchmarks.com script](https://www.jeffgeerling.com/blog/2023/using-pibenchmarkscom-sbc-disk-performance-testing).
-
 ### Network
 
 `iperf3` results:
