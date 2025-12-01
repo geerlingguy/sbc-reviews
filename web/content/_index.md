@@ -23,6 +23,7 @@ For now, this manually-curated list just links back to GitHub Issues, one for ea
 | [Radxa Orion O6](https://github.com/geerlingguy/sbc-reviews/issues/62) | 2025 | Cix CD8180 |
 | [HiFive Premier P550](https://github.com/geerlingguy/sbc-reviews/issues/65) | 2025 | ESWIN EIC7700X |
 | [GMKtec NucBox G3 Plus](https://github.com/geerlingguy/sbc-reviews/issues/64) | 2025 | Intel N150 |
+| [Framework 13 AMD](https://github.com/geerlingguy/sbc-reviews/issues/90) | 2025 | AMD Ryzen AI 5 340 |
 | [Custom Intel PC](https://github.com/geerlingguy/sbc-reviews/issues/93) | 2024 | Intel Core Ultra 265K |
 | [Apple Mac Mini M4](https://github.com/geerlingguy/sbc-reviews/issues/57) | 2024 | Apple M4 |
 | [System76 Thelio Astra](https://github.com/geerlingguy/sbc-reviews/issues/53) | 2024 | Ampere Altra Max M128-30 |

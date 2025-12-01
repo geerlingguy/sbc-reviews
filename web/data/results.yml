@@ -360,6 +360,42 @@ items:
     phpbench: 755754
     linux_recompile_sec: 500.745
 
+- name: Framework 13 AMD
+  arch: x86_64
+  link: https://github.com/geerlingguy/sbc-reviews/issues/90
+  price_as_tested: 979.00
+  year: 2025
+  geekbench_6:
+    single: 2845
+    multi: 10695
+  geekbench_5:
+    single: null
+    multi: null
+  hpl_gflops: 88.787
+  power_watts:
+    idle: 2.7
+    stress: 46.7
+    geekbench: 48
+    hpl: 41.6
+  network_mbps:
+    primary: null
+    wifi: 6.40
+  gpu:
+    glmark2: 15815
+    vkmark: 24410
+    gravitymark: 4200
+  ai_cpu:
+    llama3.2_3b: 23.81
+  memory_mb_sec:
+    memcpy: 26617.6
+    memset: 36943.0
+  phoronix:
+    encode_mp3_sec: 4.909
+    x264_1080p_fps: 118.38
+    x264_4k_fps: 26.20
+    phpbench: 1371865
+    linux_recompile_sec: 145.648
+
 - name: Intel Core Ultra 7 265K
   arch: x86_64
   link: https://github.com/geerlingguy/sbc-reviews/issues/93
