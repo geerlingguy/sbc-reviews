@@ -45,7 +45,7 @@ if host.data.ai_benchmark == 'llama.cpp':
     )
 
     llama_cpp_build_opts=host.data.llama_cpp_build_opts
-    num_cores = host.get_fact(Command, command="cat /proc/cpuinfo | grep -m 1 \"cpu cores\" | awk '{print $NF}'")
+    num_cores = host.get_fact(Command, command="nproc --all")
     server.shell(
         name="Build llama.cpp",
         commands=[

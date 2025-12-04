@@ -1,4 +1,4 @@
 hosts = (
-    ["asus-proart.local"],
-    {"ssh_user": "jgeerlingg"},
+    ["radxa-dragon-q6a.local"],
+    {"ssh_user": "radxa"},
 )

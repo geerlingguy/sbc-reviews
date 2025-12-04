@@ -27,6 +27,12 @@ PASTE_HERE
 PASTE_HERE
 ```
 
+### System topology
+
+TODO: Paste the output of `lstopo lstopo.png` here (install the `hwloc` package to get `lstopo`).
+
+Note: `lstopo` results may be missing some information on new and strange SoCs.
+
 ## Benchmark results
 
 ### CPU
@@ -113,7 +119,7 @@ Note: These benchmarks require an active display on the device. Not all devices 
 
 ### AI / LLM Inference
 
-Basic `ollama` LLM model inference results:
+Basic AI inference results:
 
 ```
 # Install ollama
@@ -151,9 +157,7 @@ git clone https://github.com/rojaster/tinymembench.git && cd tinymembench && mak
 
 ### Core to Core Memory Latency
 
-[comment]: # (If this is a new CPU/SoC, run c2clat to generate a core to core memory access latency graph: https://gist.github.com/geerlingguy/842974c0e49c201c28f4be54a05cc89c)
-
-TODO: Paste c2clat graph here.
+TODO: If this is a new CPU/SoC, run `c2clat` to generate a core to core memory access latency graph, and paste it here. For instructions, see: https://gist.github.com/geerlingguy/842974c0e49c201c28f4be54a05cc89c
 
 ## `sbc-bench` results
 

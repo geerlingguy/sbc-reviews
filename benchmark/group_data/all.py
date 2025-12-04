@@ -5,13 +5,14 @@ hpl_ps = 1
 hpl_qs = 4
 
 # PHP version available in system package manager (used for PTS installation).
-php_version = "8.4"
+php_version = "8.3"
 
 # Select from 'llama.cpp' or 'ollama'.
 ai_benchmark = 'llama.cpp'
 
 # llama.cpp build options (e.g. '-DGGML_VULKAN=1' or '-DGGML_CUDA=1')
-llama_cpp_build_opts = '-DGGML_VULKAN=1'
+llama_cpp_build_opts = ''
+# llama_cpp_build_opts = '-DGGML_VULKAN=1'
 # For Nvidia DGX Spark / GB10 systems:
 # llama_cpp_build_opts = '-DGGML_CUDA=1 -DCMAKE_CUDA_COMPILER=/usr/local/cuda/bin/nvcc'
 
@@ -25,10 +26,10 @@ llama_cpp_models = {
     'urls': ['https://huggingface.co/TheBloke/TinyLlama-1.1B-1T-OpenOrca-GGUF/resolve/main/tinyllama-1.1b-1t-openorca.Q4_K_M.gguf'],
     'size_in_gb': 0.7,
   },
-  # 'Llama-3.2-3B-Instruct-Q4_K_M.gguf': {
-  #   'urls': ['https://huggingface.co/bartowski/Llama-3.2-3B-Instruct-GGUF/resolve/main/Llama-3.2-3B-Instruct-Q4_K_M.gguf'],
-  #   'size_in_gb': 1.9,
-  # },
+  'Llama-3.2-3B-Instruct-Q4_K_M.gguf': {
+    'urls': ['https://huggingface.co/bartowski/Llama-3.2-3B-Instruct-GGUF/resolve/main/Llama-3.2-3B-Instruct-Q4_K_M.gguf'],
+    'size_in_gb': 1.9,
+  },
   # 'llama-2-13b.Q4_K_M.gguf': {
   #   'urls': ['https://huggingface.co/TheBloke/Llama-2-13B-GGUF/resolve/main/llama-2-13b.Q4_K_M.gguf'],
   #   'size_in_gb': 7.4,
