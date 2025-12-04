@@ -15,6 +15,7 @@ For now, this manually-curated list just links back to GitHub Issues, one for ea
 | SBC Name | Year Introduced | CPU |
 | --- | --- | --- |
 | [Dell Pro Max with GB10](https://github.com/geerlingguy/sbc-reviews/issues/92) | 2025 | Nvidia GB10 |
+| [Radxa Dragon Q6A](https://github.com/geerlingguy/sbc-reviews/issues/85) | 2025 | Qualcomm QCS6490 |
 | [Minisforum MS-R1](https://github.com/geerlingguy/sbc-reviews/issues/89) | 2025 | Cix CD8180 |
 | [Arduino Uno Q](https://github.com/geerlingguy/sbc-reviews/issues/83) | 2025 | Qualcomm Kryo-V2 |
 | [DC-ROMA Mainboard II](https://github.com/geerlingguy/sbc-reviews/issues/82) | 2025 | HiFive P550 |

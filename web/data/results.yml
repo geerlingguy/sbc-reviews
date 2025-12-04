@@ -78,35 +78,35 @@ items:
   price_as_tested: 141.39
   year: 2025
   geekbench_6:
-    single: null
-    multi: null
+    single: 1176
+    multi: 3103
   geekbench_5:
     single: null
     multi: null
-  hpl_gflops: null
+  hpl_gflops: 48.408
   power_watts:
-    idle: null
-    stress: null
-    geekbench: null
-    hpl: null
+    idle: 2.9
+    stress: 9.3
+    geekbench: 9.5
+    hpl: 10.1
   network_mbps:
-    primary: null
-    wifi: null
+    primary: 943
+    wifi: 187
   gpu:
     glmark2: null
     vkmark: null
     gravitymark: null
   ai_cpu:
-    llama3.2_3b: null
+    llama3.2_3b: 4.81
   memory_mb_sec:
-    memcpy: null
-    memset: null
+    memcpy: 8245.0
+    memset: 19482.1
   phoronix:
-    encode_mp3_sec: null
-    x264_1080p_fps: null
-    x264_4k_fps: null
-    phpbench: null
-    linux_recompile_sec: null
+    encode_mp3_sec: 10.467
+    x264_1080p_fps: 22.93
+    x264_4k_fps: 3.63
+    phpbench: 543386
+    linux_recompile_sec: 3554.437
 
 - name: Arduino Uno Q
   arch: aarch64
