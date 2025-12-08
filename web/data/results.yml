@@ -252,6 +252,42 @@ items:
     phpbench: 1381266
     linux_recompile_sec: 57.660
 
+- name: Apple Mac Studio M3 Ultra
+  arch: aarch64
+  link: https://github.com/geerlingguy/sbc-reviews/issues/95
+  price_as_tested: 11699.00
+  year: 2025
+  geekbench_6:
+    single: 3265
+    multi: 27798
+  geekbench_5:
+    single: 2395
+    multi: 42418
+  hpl_gflops: 1278.6
+  power_watts:
+    idle: 9.2
+    stress: 85.3
+    geekbench: 80.6
+    hpl: 213
+  network_mbps:
+    primary: null
+    wifi: null
+  gpu:
+    glmark2: null
+    vkmark: null
+    gravitymark: 39916
+  ai_cpu:
+    llama3.2_3b: 154.60
+  memory_mb_sec:
+    memcpy: 68879.1
+    memset: 58347.4
+  phoronix:
+    encode_mp3_sec: null
+    x264_1080p_fps: null
+    x264_4k_fps: null
+    phpbench: 1168820
+    linux_recompile_sec: null
+
 - name: Radxa Orion O6
   arch: aarch64
   link: https://github.com/geerlingguy/sbc-reviews/issues/62
