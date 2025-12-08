@@ -1,12 +1,18 @@
 from pyinfra import host, logger
 from pyinfra.operations import files, python, server
-from pyinfra.facts.server import Home
+from pyinfra.facts.server import Home, Os
 
 working_dir=host.get_fact(Home) + "/Downloads"
 
+# Set correct command for disk info.
+if host.get_fact(Os) == 'Darwin':
+    disk_info_command="system_profiler SPNVMeDataType"
+else:
+    disk_info_command="lsblk -o NAME,FSTYPE,LABEL,MOUNTPOINT,SIZE,MODEL",
+
 disk_info = server.shell(
     name="Retrieve disk info",
-    commands="lsblk -o NAME,FSTYPE,LABEL,MOUNTPOINT,SIZE,MODEL",
+    commands=disk_info_command,
 )
 
 def disk_callback():

@@ -11,8 +11,8 @@ php_version = "8.3"
 ai_benchmark = 'llama.cpp'
 
 # llama.cpp build options (e.g. '-DGGML_VULKAN=1' or '-DGGML_CUDA=1')
-llama_cpp_build_opts = ''
-# llama_cpp_build_opts = '-DGGML_VULKAN=1'
+# llama_cpp_build_opts = ''
+llama_cpp_build_opts = '-DGGML_VULKAN=1'
 # For Nvidia DGX Spark / GB10 systems:
 # llama_cpp_build_opts = '-DGGML_CUDA=1 -DCMAKE_CUDA_COMPILER=/usr/local/cuda/bin/nvcc'
 

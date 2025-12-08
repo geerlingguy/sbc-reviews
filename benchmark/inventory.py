@@ -1,4 +1,4 @@
 hosts = (
-    ["radxa-dragon-q6a.local"],
-    {"ssh_user": "radxa"},
+    ["mac-studio-1.local"],
+    {"ssh_user": "jgeerling"},
 )
