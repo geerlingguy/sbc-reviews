@@ -1,5 +1,41 @@
 items:
 
+- name: Raspberry Pi CM0
+  arch: aarch64
+  link: https://github.com/geerlingguy/sbc-reviews/issues/98
+  price_as_tested: 50.00
+  year: 2025
+  geekbench_6:
+    single: null
+    multi: null
+  geekbench_5:
+    single: null
+    multi: null
+  hpl_gflops: null
+  power_watts:
+    idle: 1.2
+    stress: 3.7
+    geekbench: null
+    hpl: 3.7
+  network_mbps:
+    primary: 94.5
+    wifi: null
+  gpu:
+    glmark2: null
+    vkmark: null
+    gravitymark: null
+  ai_cpu:
+    llama3.2_3b: null
+  memory_mb_sec:
+    memcpy: 590.5
+    memset: 924.6
+  phoronix:
+    encode_mp3_sec: null
+    x264_1080p_fps: null
+    x264_4k_fps: null
+    phpbench: null
+    linux_recompile_sec: null
+
 - name: Dell Pro Max with GB10
   arch: aarch64
   link: https://github.com/geerlingguy/sbc-reviews/issues/92
