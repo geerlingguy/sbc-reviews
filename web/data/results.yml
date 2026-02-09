@@ -829,7 +829,7 @@ items:
     linux_recompile_sec: null
 
 - name: LattePanda Mu
-  arch: aarch64
+  arch: x86_64
   link: https://github.com/geerlingguy/sbc-reviews/issues/42
   price_as_tested: 139.00
   year: 2024
