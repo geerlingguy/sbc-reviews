@@ -11,10 +11,14 @@ php_version = "8.3"
 ai_benchmark = 'llama.cpp'
 
 # llama.cpp build options (e.g. '-DGGML_VULKAN=1' or '-DGGML_CUDA=1')
-# llama_cpp_build_opts = ''
-llama_cpp_build_opts = '-DGGML_VULKAN=1'
+llama_cpp_build_opts = ''
+
+# For most systems:
+# llama_cpp_build_opts = '-DGGML_VULKAN=1'
 # For Nvidia DGX Spark / GB10 systems:
 # llama_cpp_build_opts = '-DGGML_CUDA=1 -DCMAKE_CUDA_COMPILER=/usr/local/cuda/bin/nvcc'
+# For macOS:
+# llama_cpp_build_opts = '-DGGML_METAL=1'
 
 # https://github.com/ggml-org/llama.cpp/blob/master/tools/llama-bench/README.md
 llama_bench_opts = '-n 128 -p 512,4096 -pg 4096,128 -ngl 99 -r 2'

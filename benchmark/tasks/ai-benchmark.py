@@ -2,8 +2,8 @@ import os
 from pyinfra import host, logger
 from pyinfra.facts.files import File
 from pyinfra.facts.hardware import Memory
-from pyinfra.facts.server import Arch, Command, Home, LinuxName
-from pyinfra.operations import apt, dnf, files, git, python, server
+from pyinfra.facts.server import Arch, Command, Home, Os, LinuxName
+from pyinfra.operations import apt, brew, dnf, files, git, python, server
 from urllib.parse import urlparse
 
 host_ram_size=host.get_fact(Memory)
@@ -38,6 +38,14 @@ if host.data.ai_benchmark == 'llama.cpp':
             _sudo=True,
         )
 
+    if host.get_fact(Os) == 'Darwin':
+        brew.packages(
+            name="Ensure prerequisites are installed (macOS).",
+            packages=[
+                "cmake",
+            ],
+        )
+
     git.repo(
         name="Clone llama.cpp with git.",
         src="https://github.com/ggerganov/llama.cpp.git",
@@ -45,7 +53,10 @@ if host.data.ai_benchmark == 'llama.cpp':
     )
 
     llama_cpp_build_opts=host.data.llama_cpp_build_opts
-    num_cores = host.get_fact(Command, command="nproc --all")
+    if host.get_fact(Os) == 'Darwin':
+        num_cores = host.get_fact(Command, command="sysctl -n hw.logicalcpu")
+    else:
+        num_cores = host.get_fact(Command, command="nproc --all")
     server.shell(
         name="Build llama.cpp",
         commands=[
