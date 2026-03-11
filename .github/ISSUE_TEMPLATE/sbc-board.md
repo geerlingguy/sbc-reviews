@@ -29,7 +29,7 @@ PASTE_HERE
 
 ### System topology
 
-TODO: Paste the output of `lstopo lstopo.png` here (install the `hwloc` package to get `lstopo`).
+TODO: Paste the output of `lstopo lstopo.png` (or `.svg` if PNG is not supported—install the `hwloc` package to get `lstopo`).
 
 Note: `lstopo` results may be missing some information on new and strange SoCs.
 
