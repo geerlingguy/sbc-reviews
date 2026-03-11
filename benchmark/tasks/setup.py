@@ -14,6 +14,7 @@ if linux_name in ["Debian", "Ubuntu"]:
             "build-essential",
             "curl",
             "git",
+            "hwloc",
             "screenfetch",
             "iperf3",
             "stress-ng",
@@ -30,6 +31,7 @@ if linux_name in ["CentOS", "RedHat", "Fedora"]:
             "@development-tools",
             "curl",
             "git",
+            "hwloc",
             "screenfetch",
             "iperf3",
             "stress-ng",
@@ -44,6 +46,7 @@ if host.get_fact(Os) == 'Darwin':
         name="Ensure prerequisites are installed (macOS).",
         packages=[
             "curl",
+            "hwloc",
             "iperf3",
             "screenfetch",
             "stress-ng",

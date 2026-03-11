@@ -1,4 +1,4 @@
 hosts = (
-    ["cm0.local"],
+    ["macbook-neo.local"],
     {"ssh_user": "jgeerling"},
 )
