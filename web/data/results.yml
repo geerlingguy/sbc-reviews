@@ -1,5 +1,41 @@
 items:
 
+- name: MacBook Neo
+  arch: aarch64
+  link: https://github.com/geerlingguy/sbc-reviews/issues/102
+  price_as_tested: 599.00
+  year: 2026
+  geekbench_6:
+    single: 3566
+    multi: 8646
+  geekbench_5:
+    single: null
+    multi: null
+  hpl_gflops: null
+  power_watts:
+    idle: 2.8
+    stress: 9.3
+    geekbench: 16.0
+    hpl: null
+  network_mbps:
+    primary: 1270
+    wifi: 1270
+  gpu:
+    glmark2: null
+    vkmark: null
+    gravitymark: 14893
+  ai_cpu:
+    llama3.2_3b: 19.98
+  memory_mb_sec:
+    memcpy: 30569.4
+    memset: 36902.3
+  phoronix:
+    encode_mp3_sec: null
+    x264_1080p_fps: null
+    x264_4k_fps: null
+    phpbench: null
+    linux_recompile_sec: null
+
 - name: Raspberry Pi CM0
   arch: aarch64
   link: https://github.com/geerlingguy/sbc-reviews/issues/98

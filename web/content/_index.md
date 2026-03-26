@@ -14,6 +14,8 @@ For now, this manually-curated list just links back to GitHub Issues, one for ea
 
 | SBC Name | Year Introduced | CPU |
 | --- | --- | --- |
+| [MetaComputing AI PC Framework Mainboard](https://github.com/geerlingguy/sbc-reviews/issues/103) | 2026 | Cix CP8180 |
+| [MacBook Neo](https://github.com/geerlingguy/sbc-reviews/issues/102) | 2026 | Apple A18 Pro |
 | [Raspberry Pi CM0](https://github.com/geerlingguy/sbc-reviews/issues/98) | 2025 | Pi RP3A0-AU |
 | [Dell Pro Max with GB10](https://github.com/geerlingguy/sbc-reviews/issues/92) | 2025 | Nvidia GB10 |
 | [Radxa Dragon Q6A](https://github.com/geerlingguy/sbc-reviews/issues/85) | 2025 | Qualcomm QCS6490 |
