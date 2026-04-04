@@ -1,5 +1,41 @@
 items:
 
+- name: MetaComputing AI PC Framework 13 Arm Mainboard
+  arch: aarch64
+  link: https://github.com/geerlingguy/sbc-reviews/issues/103
+  price_as_tested: 798.00
+  year: 2026
+  geekbench_6:
+    single: 1306
+    multi: 6477
+  geekbench_5:
+    single: null
+    multi: null
+  hpl_gflops: null
+  power_watts:
+    idle: 12
+    stress: 27.5
+    geekbench: 27.7
+    hpl: 31.5
+  network_mbps:
+    primary: null
+    wifi: null
+  gpu:
+    glmark2: null
+    vkmark: null
+    gravitymark: null
+  ai_cpu:
+    llama3.2_3b: 13.10
+  memory_mb_sec:
+    memcpy: 16635.8
+    memset: 47816.0
+  phoronix:
+    encode_mp3_sec: 8.320
+    x264_1080p_fps: 52.67
+    x264_4k_fps: 12.53
+    phpbench: 626464
+    linux_recompile_sec: 812.792
+
 - name: MacBook Neo
   arch: aarch64
   link: https://github.com/geerlingguy/sbc-reviews/issues/102
