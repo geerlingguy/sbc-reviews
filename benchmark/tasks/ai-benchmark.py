@@ -79,6 +79,7 @@ if host.data.ai_benchmark == 'llama.cpp':
                     name="Downloading model: {} (file {} of {})".format(model, counter, total),
                     src=url,
                     dest="{}/llama.cpp/models/{}".format(working_dir, filename),
+                    _temp_dir="{}".format(working_dir),
                 )
 
             llama_bench_result = server.shell(
