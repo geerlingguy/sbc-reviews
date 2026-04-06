@@ -19,11 +19,11 @@ items:
     hpl: 31.5
   network_mbps:
     primary: null
-    wifi: null
+    wifi: 156
   gpu:
-    glmark2: null
+    glmark2: 3723
     vkmark: null
-    gravitymark: null
+    gravitymark: 7627
   ai_cpu:
     llama3.2_3b: 13.10
   memory_mb_sec:
