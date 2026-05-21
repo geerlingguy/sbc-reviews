@@ -14,6 +14,7 @@ For now, this manually-curated list just links back to GitHub Issues, one for ea
 
 | SBC Name | Year Introduced | CPU |
 | --- | --- | --- |
+| [Framework 12 - Intel 13th Gen](https://github.com/geerlingguy/sbc-reviews/issues/107) | 2026 | Intel i3-1315U |
 | [Framework Mainboard - AI PC (Arm)](https://github.com/geerlingguy/sbc-reviews/issues/103) | 2026 | Cix CP8180 |
 | [MacBook Neo](https://github.com/geerlingguy/sbc-reviews/issues/102) | 2026 | Apple A18 Pro |
 | [Raspberry Pi CM0](https://github.com/geerlingguy/sbc-reviews/issues/98) | 2025 | Pi RP3A0-AU |
