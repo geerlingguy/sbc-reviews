@@ -8,13 +8,13 @@ working_dir=host.get_fact(Home) + "/Downloads"
 host_arch = host.get_fact(Arch)
 match host_arch:
     case 'x86_64':
-        download_file="Geekbench-6.7.1-Linux.tar.gz"
+        download_file="Geekbench-7.0.0-Linux.tar.gz"
     case 'aarch64':
-        download_file="Geekbench-6.7.1-LinuxARMPreview.tar.gz"
+        download_file="Geekbench-7.0.0-LinuxARMPreview.tar.gz"
     case 'arm64':
-        download_file="Geekbench-6.7.1-Mac.zip"
+        download_file="Geekbench-7.0.0-Mac.zip"
     case 'riscv64':
-        download_file="Geekbench-6.7.1-LinuxRISCVPreview.tar.gz"
+        download_file="Geekbench-7.0.0-LinuxRISCVPreview.tar.gz"
     case _:
         python.raise_exception(
             name="Raise host not supported exception",
@@ -37,7 +37,7 @@ if host.get_fact(Os) == 'Darwin':
         )
     geekbench_result = server.shell(
         name="Run Geekbench",
-        commands="{}/Geekbench\ 6.app/Contents/Resources/geekbench6".format(working_dir),
+        commands="{}/Geekbench\ 7.app/Contents/Resources/geekbench7".format(working_dir),
     )
 else:
     if geekbench_download.changed:
@@ -47,7 +47,7 @@ else:
         )
     geekbench_result = server.shell(
         name="Run Geekbench",
-        commands="{}/{}/geekbench6".format(working_dir, download_file.replace('.tar.gz', '')),
+        commands="{}/{}/geekbench7".format(working_dir, download_file.replace('.tar.gz', '')),
     )
 
 def geekbench_result_callback():

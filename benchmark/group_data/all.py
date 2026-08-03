@@ -4,9 +4,6 @@
 hpl_ps = 1
 hpl_qs = 4
 
-# PHP version available in system package manager (used for PTS installation).
-php_version = "8.3"
-
 # Select from 'llama.cpp' or 'ollama'.
 ai_benchmark = 'llama.cpp'
 

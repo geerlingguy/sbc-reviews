@@ -1,4 +1,4 @@
 hosts = (
-    ["framework-12.local"],
+    ["fedora.local"],
     {"ssh_user": "jgeerling"},
 )
