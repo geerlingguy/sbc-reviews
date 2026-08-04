@@ -1,7 +1,46 @@
 items:
 
+- name: Dell XPS 13 (DX13260)
+  arch: amd64
+  link: https://github.com/geerlingguy/sbc-reviews/issues/111
+  price_as_tested: 699.00
+  year: 2026
+  geekbench_7:
+    single: 2466
+    multi: 8214
+  geekbench_6:
+    single: 2488
+    multi: 8093
+  geekbench_5:
+    single: null
+    multi: null
+  hpl_gflops: 127.91
+  power_watts:
+    idle: 0.6
+    stress: 20
+    geekbench: 39.1
+    hpl: 20.3
+  network_mbps:
+    primary: null
+    wifi: 1050
+  gpu:
+    glmark2: 3064
+    vkmark: 16341
+    gravitymark: 8648
+  ai_cpu:
+    llama3.2_3b: 23.88
+  memory_mb_sec:
+    memcpy: 22627.1
+    memset: 55533.0
+  phoronix:
+    encode_mp3_sec: 18.256
+    x264_1080p_fps: 61.48
+    x264_4k_fps: 12.89
+    phpbench: 1629951
+    linux_recompile_sec: 296.515
+
 - name: Framework 12 - Intel 13th Gen
-  arch: arm64
+  arch: amd64
   link: https://github.com/geerlingguy/sbc-reviews/issues/107
   price_as_tested: 749.00
   year: 2026
