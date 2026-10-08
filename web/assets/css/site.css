@@ -1,0 +1,9 @@
+/* Site-wide overrides for hugo-book: no left sidebar menu, wider content. */
+.book-menu,
+.book-header label[for="menu-control"] {
+  display: none;
+}
+
+.container {
+  max-width: 100rem;
+}
