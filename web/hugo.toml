@@ -5,4 +5,5 @@ title = 'SBC Reviews'
 theme = 'hugo-book'
 [params]
   BookTheme = 'auto'
-  BookSection = 'reviews'
+  # Single-page site: no left menu or right table of contents.
+  BookToC = false
