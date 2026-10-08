@@ -87,36 +87,190 @@
     summary.appendChild(list);
 
     metrics.forEach(function (m) {
-      var values = ids.map(function (id) {
-        var v = m.value(results[id]);
-        return typeof v === 'number' && isFinite(v) ? v : null;
-      });
-      var max = Math.max.apply(null, values.filter(function (v) { return v !== null; }));
-      if (!(max > 0)) return; // No data for any selected computer.
-
-      var fig = el('figure', 'compare-chart');
-      var cap = el('figcaption', null, m.title);
-      if (m.lower) cap.appendChild(el('span', 'compare-note', ' lower is better'));
-      fig.appendChild(cap);
-
-      var rows = el('div', 'compare-rows');
-      ids.forEach(function (id, i) {
-        var v = values[i];
-        rows.appendChild(el('div', 'compare-label', results[id].name));
-        var cell = el('div', 'compare-cell');
-        if (v === null) {
-          cell.appendChild(el('span', 'compare-value compare-missing', 'No data'));
-        } else {
-          var bar = el('span', 'compare-bar');
-          bar.style.setProperty('--ratio', v / max);
-          cell.appendChild(bar);
-          cell.appendChild(el('span', 'compare-value', fmt(m, v)));
-        }
-        rows.appendChild(cell);
-      });
-      fig.appendChild(rows);
-      charts.appendChild(fig);
+      var chart = buildChart(m, ids);
+      if (chart) charts.appendChild(renderChart(chart));
     });
+  }
+
+  // Pick a "nice" axis maximum and tick step (1, 2, 2.5 or 5 x 10^n) for ~4-5 intervals.
+  function niceScale(max) {
+    var rough = max / 4;
+    var mag = Math.pow(10, Math.floor(Math.log10(rough)));
+    var step = [1, 2, 2.5, 5, 10].map(function (f) { return f * mag; })
+      .filter(function (s) { return s >= rough; })[0];
+    var top = Math.ceil(max / step) * step;
+    var ticks = [];
+    for (var t = 0; t <= top + step / 1e6; t += step) ticks.push(t);
+    return { max: top, ticks: ticks };
+  }
+
+  function tickLabel(m, v) {
+    var opts = v >= 10000
+      ? { notation: 'compact', maximumFractionDigits: 1 }
+      : { maximumFractionDigits: 2 };
+    return (m.prefix || '') + v.toLocaleString('en-US', opts);
+  }
+
+  function buildChart(m, ids) {
+    var rows = ids.map(function (id) {
+      var v = m.value(results[id]);
+      v = typeof v === 'number' && isFinite(v) ? v : null;
+      return { name: results[id].name, value: v, text: v === null ? 'No data' : fmt(m, v) };
+    });
+    var max = Math.max.apply(null, rows.map(function (r) { return r.value || 0; }));
+    if (!(max > 0)) return null; // No data for any selected computer.
+    var scale = niceScale(max);
+    return {
+      metric: m,
+      title: m.title + (m.unit ? ' (' + m.unit + ')' : ''),
+      rows: rows,
+      max: scale.max,
+      ticks: scale.ticks.map(function (t) { return { value: t, text: tickLabel(m, t) }; })
+    };
+  }
+
+  function renderChart(c) {
+    var n = c.rows.length;
+    var fig = el('figure', 'compare-chart');
+    var cap = el('figcaption', null, c.title);
+    if (c.metric.lower) cap.appendChild(el('span', 'compare-note', ' lower is better'));
+    fig.appendChild(cap);
+
+    var grid = el('div', 'compare-rows');
+    // Explicit row placement: desktop puts label and bar side by side (--r);
+    // mobile stacks the label above its bar (--rm).
+    function place(e, r, rm) {
+      e.style.setProperty('--r', r);
+      e.style.setProperty('--rm', rm);
+      return e;
+    }
+
+    // Gridlines + Y axis line behind the bars.
+    var plot = place(el('div', 'compare-gridlines'), '1 / ' + (n + 1), '1 / ' + (2 * n + 1));
+    c.ticks.forEach(function (t) {
+      var line = el('span');
+      line.style.left = (t.value / c.max * 100) + '%';
+      plot.appendChild(line);
+    });
+    grid.appendChild(plot);
+
+    c.rows.forEach(function (r, i) {
+      grid.appendChild(place(el('div', 'compare-label', r.name), i + 1, 2 * i + 1));
+      var cell = place(el('div', 'compare-cell'), i + 1, 2 * i + 2);
+      if (r.value === null) {
+        cell.appendChild(el('span', 'compare-value compare-missing', r.text));
+      } else {
+        var ratio = r.value / c.max;
+        var bar = el('span', 'compare-bar');
+        bar.style.width = (ratio * 100) + '%';
+        var val = el('span', 'compare-value', r.text);
+        val.style.left = (ratio * 100) + '%';
+        cell.appendChild(bar);
+        cell.appendChild(val);
+      }
+      grid.appendChild(cell);
+    });
+
+    // X axis scale.
+    var axis = place(el('div', 'compare-axis'), n + 1, 2 * n + 1);
+    c.ticks.forEach(function (t) {
+      var lbl = el('span', null, t.text);
+      lbl.style.left = (t.value / c.max * 100) + '%';
+      axis.appendChild(lbl);
+    });
+    grid.appendChild(axis);
+    fig.appendChild(grid);
+
+    var dl = el('button', 'compare-download', 'Download PNG');
+    dl.type = 'button';
+    dl.addEventListener('click', function () { downloadPng(c); });
+    fig.appendChild(dl);
+    return fig;
+  }
+
+  // Draw the chart onto a 1920x1080 canvas (styled like the video graphics) and save it.
+  function downloadPng(c) {
+    var W = 1920, H = 1080;
+    var canvas = document.createElement('canvas');
+    canvas.width = W;
+    canvas.height = H;
+    var ctx = canvas.getContext('2d');
+    var font = '"Helvetica Neue", Helvetica, Arial, sans-serif';
+
+    var bg = ctx.createLinearGradient(0, 0, 0, H);
+    bg.addColorStop(0, '#0a0a0a');
+    bg.addColorStop(1, '#3a3a3a');
+    ctx.fillStyle = bg;
+    ctx.fillRect(0, 0, W, H);
+
+    ctx.fillStyle = '#fff';
+    ctx.textAlign = 'center';
+    ctx.textBaseline = 'middle';
+    ctx.font = '500 56px ' + font;
+    ctx.fillText(c.title, W / 2, 170);
+
+    var n = c.rows.length;
+    var top = 270, bottom = H - 170;
+    var rowH = (bottom - top) / n;
+    var barH = Math.min(rowH * 0.72, 100);
+    var labelSize = Math.max(18, Math.min(34, rowH * 0.42));
+
+    // Label column sized to the longest name, capped at ~a third of the width.
+    ctx.font = labelSize + 'px ' + font;
+    var labelW = Math.min(W * 0.32, Math.max.apply(null, c.rows.map(function (r) {
+      return ctx.measureText(r.name).width;
+    })));
+    var x0 = 120 + labelW + 30;
+    ctx.font = (labelSize + 4) + 'px ' + font;
+    var valueW = Math.max.apply(null, c.rows.map(function (r) { return ctx.measureText(r.text).width; }));
+    var x1 = W - 120 - Math.max(0, valueW - 60);
+    var scale = function (v) { return x0 + (x1 - x0) * v / c.max; };
+
+    // Gridlines and tick labels.
+    ctx.strokeStyle = 'rgba(255,255,255,0.75)';
+    ctx.lineWidth = 2;
+    ctx.fillStyle = '#fff';
+    ctx.font = '34px ' + font;
+    ctx.textAlign = 'center';
+    c.ticks.forEach(function (t) {
+      var x = Math.round(scale(t.value)) + 0.5;
+      ctx.beginPath();
+      ctx.moveTo(x, top - 20);
+      ctx.lineTo(x, bottom + 10);
+      ctx.stroke();
+      ctx.fillText(t.text, x, bottom + 60);
+    });
+
+    c.rows.forEach(function (r, i) {
+      var cy = top + rowH * (i + 0.5);
+      ctx.textAlign = 'right';
+      ctx.fillStyle = '#fff';
+      ctx.font = labelSize + 'px ' + font;
+      ctx.fillText(r.name, x0 - 30, cy, labelW);
+      ctx.textAlign = 'left';
+      ctx.font = (labelSize + 4) + 'px ' + font;
+      if (r.value === null) {
+        ctx.fillStyle = 'rgba(255,255,255,0.6)';
+        ctx.fillText(r.text, x0 + 14, cy);
+        return;
+      }
+      var w = scale(r.value) - x0;
+      ctx.fillStyle = '#00a6ff';
+      ctx.fillRect(x0, cy - barH / 2, Math.max(w, 2), barH);
+      ctx.fillStyle = '#fff';
+      ctx.fillText(r.text, x0 + w + 14, cy);
+    });
+
+    var name = c.metric.title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+    canvas.toBlob(function (blob) {
+      var a = document.createElement('a');
+      a.href = URL.createObjectURL(blob);
+      a.download = name + '.png';
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+      setTimeout(function () { URL.revokeObjectURL(a.href); }, 1000);
+    }, 'image/png');
   }
 
   window.addEventListener('hashchange', render);
