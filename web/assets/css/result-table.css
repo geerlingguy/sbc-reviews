@@ -44,3 +44,69 @@ table.sticky-table {
   background-color: #111;
   z-index: 1;
 }
+
+/* Selection checkbox column (sticky alongside the Name column). */
+.sticky-table th.select-col,
+.sticky-table td.select-col {
+  width: 2rem;
+  min-width: 2rem;
+  text-align: center;
+}
+
+.sticky-table th:nth-child(2),
+.sticky-table td:nth-child(2) {
+  position: sticky;
+  left: 2rem;
+  background-color: #111;
+  z-index: 1;
+}
+
+.sticky-table th:nth-child(2) {
+  z-index: 2;
+}
+
+.compare-select {
+  cursor: pointer;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+/* Compare button below the table. */
+.compare-controls {
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 1rem;
+}
+
+.compare-controls[hidden] {
+  display: none;
+}
+
+.compare-controls p {
+  margin: 0;
+}
+
+#compare-button {
+  font: inherit;
+  font-weight: bold;
+  padding: 0.5rem 1.25rem;
+  border: 0;
+  border-radius: 4px;
+  background: #00a6ff;
+  color: #fff;
+  cursor: pointer;
+}
+
+#compare-button:hover,
+#compare-button:focus-visible {
+  background: #0089d6;
+}

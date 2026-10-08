@@ -1,0 +1,163 @@
+/* Benchmark comparison bar charts. */
+.comparison-list {
+  margin-bottom: 2rem;
+}
+
+.compare-chart {
+  margin: 0 0 2rem;
+  padding: 1rem;
+  border: 1px solid rgba(127, 127, 127, 0.3);
+  border-radius: 6px;
+}
+
+.compare-chart figcaption {
+  font-size: 1.15em;
+  font-weight: bold;
+  margin-bottom: 0.75rem;
+}
+
+.compare-note {
+  font-size: 0.8em;
+  font-weight: normal;
+  opacity: 0.65;
+  margin-left: 0.4em;
+}
+
+.compare-rows {
+  display: grid;
+  /* label | plot area | room for the value label beside the longest bar */
+  grid-template-columns: minmax(6rem, max-content) 1fr 6.5em;
+  row-gap: 0.5rem;
+  align-items: center;
+}
+
+.compare-label {
+  grid-column: 1;
+  grid-row: var(--r);
+  text-align: right;
+  padding-right: 0.75rem;
+}
+
+.compare-cell {
+  grid-column: 2;
+  grid-row: var(--r);
+  position: relative;
+  height: 1.75rem;
+  display: flex;
+  align-items: center;
+  z-index: 1;
+}
+
+.compare-bar {
+  height: 100%;
+  min-width: 2px;
+  background: #00a6ff;
+}
+
+.compare-value {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-left: 0.5rem;
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+
+.compare-missing {
+  left: 0;
+  opacity: 0.55;
+  font-style: italic;
+}
+
+/* Gridlines behind the bars; the line at 0 doubles as the Y axis. */
+.compare-gridlines {
+  grid-column: 2;
+  grid-row: var(--r);
+  align-self: stretch;
+  position: relative;
+  margin: -0.25rem 0;
+}
+
+.compare-gridlines span {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  border-left: 1px solid rgba(127, 127, 127, 0.35);
+}
+
+.compare-gridlines span:first-child {
+  border-left-color: rgba(127, 127, 127, 0.9);
+}
+
+/* X axis line and scale labels. */
+.compare-axis {
+  grid-column: 2;
+  grid-row: var(--r);
+  position: relative;
+  height: 1.5rem;
+  border-top: 1px solid rgba(127, 127, 127, 0.9);
+  font-size: 0.8em;
+  opacity: 0.8;
+}
+
+.compare-axis span {
+  position: absolute;
+  top: 0.2rem;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+
+.compare-download {
+  margin-top: 0.75rem;
+  font: inherit;
+  font-size: 0.85em;
+  padding: 0.3rem 0.8rem;
+  border: 1px solid rgba(127, 127, 127, 0.5);
+  border-radius: 4px;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+}
+
+.compare-download:hover,
+.compare-download:focus-visible {
+  border-color: #00a6ff;
+  color: #00a6ff;
+}
+
+/* Stack labels above bars on narrow screens. */
+@media (max-width: 600px) {
+  .compare-chart {
+    padding: 0.75rem;
+  }
+
+  .compare-rows {
+    grid-template-columns: 1fr 5em;
+    row-gap: 0.15rem;
+  }
+
+  .compare-label {
+    grid-column: 1 / -1;
+    grid-row: var(--rm);
+    text-align: left;
+    font-size: 0.9em;
+    padding: 0.35rem 0 0;
+  }
+
+  .compare-cell,
+  .compare-gridlines,
+  .compare-axis {
+    grid-column: 1;
+    grid-row: var(--rm);
+  }
+
+  .compare-cell {
+    height: 1.25rem;
+  }
+
+  .compare-label {
+    position: relative;
+    z-index: 1;
+  }
+}

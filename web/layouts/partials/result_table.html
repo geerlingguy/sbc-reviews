@@ -3,6 +3,7 @@
   <table class="sortable results-table sticky-table" id="benchmark-results-table">
     <thead>
       <tr>
+        <th class="sorttable_nosort select-col"><span class="visually-hidden">Select</span></th>
         <th>Name</th>
         <th>Year</th>
         <th>Price</th>
@@ -29,6 +30,7 @@
     <tbody>
       {{ range .Site.Data.results.items }}
       <tr>
+        <td class="select-col"><input type="checkbox" class="compare-select" value="{{ urlize .name }}" aria-label="Select {{ .name }} for comparison"></td>
         <td><a href="{{ .link }}">{{ .name }}</a></td>
         <td>{{ .year }}</td>
         {{ if .price_as_tested }}
@@ -63,3 +65,42 @@
     </tbody>
   </table>
 </div>
+
+<div class="compare-controls" id="compare-controls" hidden>
+  <p>Compare results of selected computers</p>
+  <button type="button" id="compare-button">Compare</button>
+</div>
+
+<script>
+(function () {
+  var table = document.getElementById('benchmark-results-table');
+  var controls = document.getElementById('compare-controls');
+  var button = document.getElementById('compare-button');
+  var base = '{{ "reviews/results/comparison/" | relURL }}';
+
+  function selected() {
+    return Array.prototype.map.call(
+      table.querySelectorAll('input.compare-select:checked'),
+      function (box) { return box.value; }
+    );
+  }
+
+  table.addEventListener('change', function (e) {
+    if (e.target.classList.contains('compare-select')) {
+      controls.hidden = selected().length === 0;
+    }
+  });
+
+  button.addEventListener('click', function () {
+    var ids = selected();
+    if (ids.length) {
+      window.location.href = base + '#' + ids.map(encodeURIComponent).join(',');
+    }
+  });
+
+  // Restore button state if the browser kept checkbox state (e.g. back nav).
+  window.addEventListener('pageshow', function () {
+    controls.hidden = selected().length === 0;
+  });
+})();
+</script>
