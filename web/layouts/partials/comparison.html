@@ -263,6 +263,12 @@
       ctx.fillText(r.text, x0 + w + 14, cy);
     });
 
+    // Muted source credit, centered along the bottom edge.
+    ctx.textAlign = 'center';
+    ctx.fillStyle = 'rgba(255,255,255,0.45)';
+    ctx.font = '22px ' + font;
+    ctx.fillText("Benchmark data from Jeff Geerling's SBC Reviews repository: sbc-reviews.jeffgeerling.com", W / 2, H - 36);
+
     var name = c.metric.title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
     canvas.toBlob(function (blob) {
       var a = document.createElement('a');
