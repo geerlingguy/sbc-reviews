@@ -188,13 +188,15 @@
     return fig;
   }
 
-  // Draw the chart onto a 1920x1080 canvas (styled like the video graphics) and save it.
+  // Draw the chart onto a 4K (3840x2160) canvas, styled like the video graphics, and save it.
+  // Layout is in 1920x1080 units, scaled 2x so everything stays crisp at 4K.
   function downloadPng(c) {
-    var W = 1920, H = 1080;
+    var W = 1920, H = 1080, S = 2;
     var canvas = document.createElement('canvas');
-    canvas.width = W;
-    canvas.height = H;
+    canvas.width = W * S;
+    canvas.height = H * S;
     var ctx = canvas.getContext('2d');
+    ctx.scale(S, S);
     var font = '"Helvetica Neue", Helvetica, Arial, sans-serif';
 
     var bg = ctx.createLinearGradient(0, 0, 0, H);
@@ -233,7 +235,7 @@
     ctx.font = '34px ' + font;
     ctx.textAlign = 'center';
     c.ticks.forEach(function (t) {
-      var x = Math.round(scale(t.value)) + 0.5;
+      var x = Math.round(scale(t.value) * S) / S + 0.25;
       ctx.beginPath();
       ctx.moveTo(x, top - 20);
       ctx.lineTo(x, bottom + 10);
