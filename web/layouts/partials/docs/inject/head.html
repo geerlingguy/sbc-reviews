@@ -1,3 +1,5 @@
+{{ $site := resources.Get "css/site.css" | minify | fingerprint }}
+<link rel="stylesheet" href="{{ $site.RelPermalink }}">
 {{ with .Params.custom_css }}
   {{ $style := resources.Get . | minify | fingerprint }}
   <link rel="stylesheet" href="{{ $style.RelPermalink }}">
