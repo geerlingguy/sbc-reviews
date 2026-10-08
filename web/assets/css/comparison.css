@@ -1,0 +1,87 @@
+/* Benchmark comparison bar charts. */
+.comparison-list {
+  margin-bottom: 2rem;
+}
+
+.compare-chart {
+  margin: 0 0 2rem;
+  padding: 1rem;
+  border: 1px solid rgba(127, 127, 127, 0.3);
+  border-radius: 6px;
+}
+
+.compare-chart figcaption {
+  font-size: 1.15em;
+  font-weight: bold;
+  margin-bottom: 0.75rem;
+}
+
+.compare-note {
+  font-size: 0.8em;
+  font-weight: normal;
+  opacity: 0.65;
+  margin-left: 0.4em;
+}
+
+.compare-rows {
+  display: grid;
+  grid-template-columns: minmax(6rem, max-content) 1fr;
+  gap: 0.5rem 0.75rem;
+  align-items: center;
+}
+
+.compare-label {
+  text-align: right;
+}
+
+.compare-cell {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-width: 0;
+}
+
+.compare-bar {
+  flex: none;
+  height: 1.75rem;
+  /* Leave room for the value label beside the longest bar. */
+  width: calc((100% - 8.5em) * var(--ratio));
+  min-width: 2px;
+  background: #00a6ff;
+  border-radius: 0 2px 2px 0;
+}
+
+.compare-value {
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+
+.compare-missing {
+  opacity: 0.55;
+  font-style: italic;
+}
+
+/* Stack labels above bars on narrow screens. */
+@media (max-width: 600px) {
+  .compare-chart {
+    padding: 0.75rem;
+  }
+
+  .compare-rows {
+    grid-template-columns: 1fr;
+    gap: 0.15rem;
+  }
+
+  .compare-label {
+    text-align: left;
+    font-size: 0.9em;
+  }
+
+  .compare-cell {
+    margin-bottom: 0.5rem;
+  }
+
+  .compare-bar {
+    height: 1.25rem;
+  }
+}

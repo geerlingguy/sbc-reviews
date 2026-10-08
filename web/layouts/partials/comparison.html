@@ -1,0 +1,125 @@
+{{- /* Map of urlized name -> result, matching checkbox values on the results table. */ -}}
+{{- $results := dict -}}
+{{- range .Site.Data.results.items -}}
+  {{- $results = merge $results (dict (urlize .name) .) -}}
+{{- end -}}
+
+<p class="comparison-back"><a href="{{ "reviews/results/" | relURL }}">&larr; Back to all results</a></p>
+
+<div id="comparison-summary"></div>
+<div id="comparison-charts"></div>
+
+<script id="comparison-data" type="application/json">{{ $results | jsonify | safeJS }}</script>
+<script>
+(function () {
+  var results = JSON.parse(document.getElementById('comparison-data').textContent);
+
+  // Each metric: title, unit, value getter, and whether lower values are better.
+  function get(path) {
+    return function (r) {
+      return path.split('.').reduce(function (o, k) { return o == null ? null : o[k]; }, r);
+    };
+  }
+  var metrics = [
+    { title: 'Geekbench 6 (single-core)', unit: '', value: get('geekbench_6.single') },
+    { title: 'Geekbench 6 (multi-core)', unit: '', value: get('geekbench_6.multi') },
+    { title: 'HPL', unit: 'Gflops', value: get('hpl_gflops') },
+    { title: 'HPL Efficiency', unit: 'Gflops/W', decimals: 2, value: function (r) {
+        var g = r.hpl_gflops, w = r.power_watts && r.power_watts.hpl;
+        return g && w ? g / w : null;
+      } },
+    { title: 'Power (idle)', unit: 'W', lower: true, value: get('power_watts.idle') },
+    { title: 'Power (stress)', unit: 'W', lower: true, value: get('power_watts.stress') },
+    { title: 'Network', unit: 'Mbps', value: get('network_mbps.primary') },
+    { title: 'WiFi', unit: 'Mbps', value: get('network_mbps.wifi') },
+    { title: 'GLMark2', unit: '', value: get('gpu.glmark2') },
+    { title: 'vkmark', unit: '', value: get('gpu.vkmark') },
+    { title: 'Memory (memcpy)', unit: 'MB/s', value: get('memory_mb_sec.memcpy') },
+    { title: 'Memory (memset)', unit: 'MB/s', value: get('memory_mb_sec.memset') },
+    { title: 'Encode MP3', unit: 'sec', lower: true, value: get('phoronix.encode_mp3_sec') },
+    { title: 'x264 (1080p)', unit: 'fps', value: get('phoronix.x264_1080p_fps') },
+    { title: 'x264 (4K)', unit: 'fps', value: get('phoronix.x264_4k_fps') },
+    { title: 'PHPBench', unit: '', value: get('phoronix.phpbench') },
+    { title: 'Linux compile', unit: 'sec', lower: true, value: get('phoronix.linux_recompile_sec') },
+    { title: 'Price (as tested)', unit: '', prefix: '$', decimals: 2, lower: true, value: get('price_as_tested') }
+  ];
+
+  function el(tag, cls, text) {
+    var e = document.createElement(tag);
+    if (cls) e.className = cls;
+    if (text != null) e.textContent = text;
+    return e;
+  }
+
+  function fmt(m, v) {
+    var opts = m.decimals != null
+      ? { minimumFractionDigits: m.decimals, maximumFractionDigits: m.decimals }
+      : { maximumFractionDigits: 3 };
+    return (m.prefix || '') + v.toLocaleString('en-US', opts) + (m.unit ? ' ' + m.unit : '');
+  }
+
+  function render() {
+    var summary = document.getElementById('comparison-summary');
+    var charts = document.getElementById('comparison-charts');
+    summary.textContent = '';
+    charts.textContent = '';
+
+    var ids = window.location.hash.replace(/^#/, '').split(',')
+      .map(function (s) { try { return decodeURIComponent(s); } catch (e) { return ''; } })
+      .filter(function (id, i, a) { return results[id] && a.indexOf(id) === i; });
+
+    if (!ids.length) {
+      summary.appendChild(el('p', null,
+        'No computers selected. Go back to the results table, check the computers you want to compare, and click Compare.'));
+      return;
+    }
+
+    // List of selected computers, linked to their reviews.
+    var list = el('ul', 'comparison-list');
+    ids.forEach(function (id) {
+      var r = results[id], li = el('li');
+      var a = el('a', null, r.name);
+      a.href = r.link;
+      li.appendChild(a);
+      li.appendChild(document.createTextNode(' (' + [r.arch, r.year].filter(Boolean).join(', ') + ')'));
+      list.appendChild(li);
+    });
+    summary.appendChild(list);
+
+    metrics.forEach(function (m) {
+      var values = ids.map(function (id) {
+        var v = m.value(results[id]);
+        return typeof v === 'number' && isFinite(v) ? v : null;
+      });
+      var max = Math.max.apply(null, values.filter(function (v) { return v !== null; }));
+      if (!(max > 0)) return; // No data for any selected computer.
+
+      var fig = el('figure', 'compare-chart');
+      var cap = el('figcaption', null, m.title);
+      if (m.lower) cap.appendChild(el('span', 'compare-note', ' lower is better'));
+      fig.appendChild(cap);
+
+      var rows = el('div', 'compare-rows');
+      ids.forEach(function (id, i) {
+        var v = values[i];
+        rows.appendChild(el('div', 'compare-label', results[id].name));
+        var cell = el('div', 'compare-cell');
+        if (v === null) {
+          cell.appendChild(el('span', 'compare-value compare-missing', 'No data'));
+        } else {
+          var bar = el('span', 'compare-bar');
+          bar.style.setProperty('--ratio', v / max);
+          cell.appendChild(bar);
+          cell.appendChild(el('span', 'compare-value', fmt(m, v)));
+        }
+        rows.appendChild(cell);
+      });
+      fig.appendChild(rows);
+      charts.appendChild(fig);
+    });
+  }
+
+  window.addEventListener('hashchange', render);
+  render();
+})();
+</script>
