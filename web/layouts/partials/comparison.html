@@ -122,7 +122,8 @@
     var scale = niceScale(max);
     return {
       metric: m,
-      title: m.title + (m.unit ? ' (' + m.unit + ')' : ''),
+      // Subtitle under the plain title (page and PNG), e.g. "(Gflops, higher is better)".
+      pngSubtitle: '(' + (m.unit ? m.unit + ', ' : '') + (m.lower ? 'lower' : 'higher') + ' is better)',
       rows: rows,
       max: scale.max,
       ticks: scale.ticks.map(function (t) { return { value: t, text: tickLabel(m, t) }; })
@@ -132,8 +133,8 @@
   function renderChart(c) {
     var n = c.rows.length;
     var fig = el('figure', 'compare-chart');
-    var cap = el('figcaption', null, c.title);
-    if (c.metric.lower) cap.appendChild(el('span', 'compare-note', ' lower is better'));
+    var cap = el('figcaption', null, c.metric.title);
+    cap.appendChild(el('span', 'compare-note', c.pngSubtitle));
     fig.appendChild(cap);
 
     var grid = el('div', 'compare-rows');
@@ -209,7 +210,12 @@
     ctx.textAlign = 'center';
     ctx.textBaseline = 'middle';
     ctx.font = '500 56px ' + font;
-    ctx.fillText(c.title, W / 2, 170);
+    ctx.fillText(c.metric.title, W / 2, 150, W - 160);
+
+    // Muted units / direction line, styled like the source credit.
+    ctx.fillStyle = 'rgba(255,255,255,0.45)';
+    ctx.font = '22px ' + font;
+    ctx.fillText(c.pngSubtitle, W / 2, 205);
 
     var n = c.rows.length;
     var top = 270, bottom = H - 170;

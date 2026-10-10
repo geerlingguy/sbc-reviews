@@ -16,11 +16,13 @@
   margin-bottom: 0.75rem;
 }
 
+/* Sits beside the heading; wraps below it as a unit when space runs out. */
 .compare-note {
-  font-size: 0.8em;
+  display: inline-block;
+  font-size: 0.75em;
   font-weight: normal;
-  opacity: 0.65;
-  margin-left: 0.4em;
+  opacity: 0.6;
+  margin-left: 0.5em;
 }
 
 .compare-rows {
