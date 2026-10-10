@@ -41,7 +41,7 @@
     { title: 'x264 (4K)', unit: 'fps', value: get('phoronix.x264_4k_fps') },
     { title: 'PHPBench', unit: '', value: get('phoronix.phpbench') },
     { title: 'Linux compile', unit: 'sec', lower: true, value: get('phoronix.linux_recompile_sec') },
-    { title: 'Price as tested', unit: '', prefix: '$', decimals: 2, lower: true, value: get('price_as_tested') }
+    { title: 'Price (as tested)', unit: '', prefix: '$', decimals: 2, lower: true, value: get('price_as_tested') }
   ];
 
   function el(tag, cls, text) {
@@ -123,8 +123,8 @@
     return {
       metric: m,
       title: m.title + (m.unit ? ' (' + m.unit + ')' : ''),
-      // PNG title, like the video graphics: "HPL (Gflops, higher is better)".
-      pngTitle: m.title + ' (' + (m.unit ? m.unit + ', ' : '') + (m.lower ? 'lower' : 'higher') + ' is better)',
+      // PNG subtitle under the plain title, e.g. "(Gflops, higher is better)".
+      pngSubtitle: '(' + (m.unit ? m.unit + ', ' : '') + (m.lower ? 'lower' : 'higher') + ' is better)',
       rows: rows,
       max: scale.max,
       ticks: scale.ticks.map(function (t) { return { value: t, text: tickLabel(m, t) }; })
@@ -211,7 +211,12 @@
     ctx.textAlign = 'center';
     ctx.textBaseline = 'middle';
     ctx.font = '500 56px ' + font;
-    ctx.fillText(c.pngTitle, W / 2, 170, W - 160);
+    ctx.fillText(c.metric.title, W / 2, 150, W - 160);
+
+    // Muted units / direction line, styled like the source credit.
+    ctx.fillStyle = 'rgba(255,255,255,0.45)';
+    ctx.font = '22px ' + font;
+    ctx.fillText(c.pngSubtitle, W / 2, 205);
 
     var n = c.rows.length;
     var top = 270, bottom = H - 170;
