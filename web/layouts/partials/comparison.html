@@ -122,8 +122,7 @@
     var scale = niceScale(max);
     return {
       metric: m,
-      title: m.title + (m.unit ? ' (' + m.unit + ')' : ''),
-      // PNG subtitle under the plain title, e.g. "(Gflops, higher is better)".
+      // Subtitle under the plain title (page and PNG), e.g. "(Gflops, higher is better)".
       pngSubtitle: '(' + (m.unit ? m.unit + ', ' : '') + (m.lower ? 'lower' : 'higher') + ' is better)',
       rows: rows,
       max: scale.max,
@@ -134,8 +133,8 @@
   function renderChart(c) {
     var n = c.rows.length;
     var fig = el('figure', 'compare-chart');
-    var cap = el('figcaption', null, c.title);
-    if (c.metric.lower) cap.appendChild(el('span', 'compare-note', ' lower is better'));
+    var cap = el('figcaption', null, c.metric.title);
+    cap.appendChild(el('span', 'compare-note', c.pngSubtitle));
     fig.appendChild(cap);
 
     var grid = el('div', 'compare-rows');

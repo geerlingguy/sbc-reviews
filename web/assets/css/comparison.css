@@ -17,10 +17,11 @@
 }
 
 .compare-note {
-  font-size: 0.8em;
+  display: block;
+  font-size: 0.75em;
   font-weight: normal;
-  opacity: 0.65;
-  margin-left: 0.4em;
+  opacity: 0.6;
+  margin-top: 0.1rem;
 }
 
 .compare-rows {
