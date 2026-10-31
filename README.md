@@ -38,6 +38,8 @@ pyinfra inventory.py main.py -y
 
 This assumes you've already configured an SSH connection to the system under test.
 
+Each benchmark that completes successfully writes a marker file to `~/Downloads/.benchmark-completed/` on the system under test, and is skipped on subsequent runs of `main.py`. That way, you can re-run `main.py` until every benchmark passes. To re-run everything, pass `--data force_run=true` (or set `force_run = True` in `group_data/all.py`). To re-run one benchmark, delete its marker file.
+
 You can run individual benchmarks separately by calling the task files individually:
 
 ```
