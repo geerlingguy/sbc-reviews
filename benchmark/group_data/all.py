@@ -1,7 +1,6 @@
 # Inventory variables applied to all hosts.
 
-# Re-run all benchmarks, even ones already marked as completed on the host.
-# Can also be set at runtime with `--data force_run=true`.
+# Re-run all benchmarks, even ones already marked as completed.
 force_run = False
 
 # These two variables, when multiplied, should generally equal the core count.

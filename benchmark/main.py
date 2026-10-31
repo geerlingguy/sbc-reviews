@@ -21,10 +21,7 @@ tasks = [
 local.include("tasks/setup.py")
 local.include("tasks/basics.py")
 
-# Each successfully-completed task writes a marker file to this directory on
-# the system under test, so re-runs skip tasks that already passed. Set
-# `force_run = True` in group_data, or pass `--data force_run=true`, to re-run
-# everything. To re-run a single task, delete its marker file.
+# Marker files for completed tasks are stored here on the system under test.
 completed_dir = host.get_fact(Home) + "/Downloads/.benchmark-completed"
 force_run = host.data.get('force_run', False)
 
@@ -43,8 +40,7 @@ def task_callback():
             logger.info("\n\nPausing {} seconds for cooldown...\n".format(pause_seconds))
             time.sleep(pause_seconds)
 
-        # Nested operations raise on failure, so if this returns, every
-        # operation in the task succeeded.
+        # Raises if any operation fails, so the marker below is only written on success.
         local.include("tasks/{}".format(task))
         ran_previous_task = True
 
