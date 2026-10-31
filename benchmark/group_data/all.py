@@ -1,5 +1,8 @@
 # Inventory variables applied to all hosts.
 
+# Re-run all benchmarks, even ones already marked as completed.
+force_run = False
+
 # These two variables, when multiplied, should generally equal the core count.
 hpl_ps = 1
 hpl_qs = 4
